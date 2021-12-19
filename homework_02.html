@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .out{
+            margin: auto;
+            display: grid;
+            height: 500px;
+            
+        }
+        .in{
+            margin: auto;
+        }
+
+        .wrap{
+            width: 1200px;
+            margin:auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .clu{
+            width: 570px;
+            margin:  7.5px;
+            padding: 7.5px;
+        }
+
+        .in img{
+            display: block;
+            margin: auto;
+        }
+        .in h3{ 
+        text-align: center;
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: bold;
+    
+    }
+
+    .in p{
+            padding: 20px 100px 50px 100px;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    
+    .head{
+        background-image: url(img/asset\ 1.webp);
+        margin: auto;
+        display: flex;
+        height: 700px;
+    }
+
+    .head nav{
+        text-align: center;
+        width: 100%;
+        font-size: 0;
+        padding: 20px 0;
+        margin: 0px 0px 0px 20px ;
+        display: flex;
+        align-items: center;
+
+        
+    }
+    .head nav a {
+        font-size: 8px;
+        display: inline-block;
+        line-height: 50px;
+        padding: 0 20px;
+        color: black;
+        text-decoration: none;
+    }
+
+    
+    .head .logo{
+        padding: 1px;
+        display: inline-block;
+        margin: 0px 0px  0px 200px;
+        line-height: 10px;
+        
+    }
+
+    .headword{
+        text-align: center;
+        height: 300px;
+        width: 1100px;
+        
+        
+        
+        
+    }
+
+    .headword_s{
+        padding: 100px;
+        margin: 50px;
+        color: black;
+    }
+
+    .intro{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1100px;
+    }
+    .intro_s{
+        width: 265px;
+        padding: 25px;
+        margin: 25px;
+        background-color: lightskyblue;
+        opacity: .5;
+    }
+    .intro_s p{
+        text-align: center;
+        background-color: lightskyblue;
+        opacity: .5;
+    }
+    .blue{
+        
+        background-image: url(img/asset\ 5.webp);
+        height: 80px;
+        font-size: 30px;
+        line-height: 80px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+    .bluefoot{
+        background-color: rgb(42, 61, 230);
+        height: 120px;
+        opacity: .5;
+        position: relative;
+        top: -120px;
+        z-index: 2;
+    }
+
+    .wrap2{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .clu2{
+        padding: 7.5px;
+        margin: 7.5px;
+        width: 270px;
+        
+    }
+
+    .clu2 h3{
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 0px;
+    }
+    .clu2 h4{
+        font-size: 22px;
+        color: red;
+        text-align: center;
+        padding: 5px 0 ;
+    }
+    .clu2 p{
+        padding: 32px;
+    }
+    .clu2 img{
+        height: 100px;
+        width: 100px;
+        display: block;
+        margin: auto;
+        padding: 30px;
+    }
+    
+    .blue2{
+        
+        background-image: url(img/asset\ 7.webp);
+        height: 120px;
+        font-size: 30px;
+        padding: 20px;
+        text-align: center;
+        z-index: 1;
+        
+    }
+    .blue2 p{
+        padding: 40px;
+    }
+    .bluefoot2{
+        background-color: rgb(42, 61, 230);
+        height: 160px;
+        opacity: .5;
+        position: relative;
+        top: -160px;
+        z-index: 2;
+    }
+    
+
+    .wrap3{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+    }
+    .clu3{
+        width: 270px;
+        padding: 7.5px;
+        margin: 7.5px;
+    }
+    .clu3 img{
+        display: block;
+        margin: auto;        
+    }
+    
+    .clu3 p{
+        padding: 20px 40px;
+    }
+    .clu3 h3{
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+        padding: 0px 20px;
+    }
+
+    .blue3{
+        background-image: url(img/asset\ 16.webp);
+        height: 180px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 180px;
+        
+        
+    }
+
+    .wrap4{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+        
+    }
+    .clu4{
+        width: 500px;
+        margin: 7.5px;
+        padding: 20px;
+    }
+    .clu4 h3{
+        font-weight: bold; 
+        padding: 20px 0px;
+        font-size: 30px
+    }
+    .clu4 img{
+        display: block;
+        margin: auto;
+    }
+    .footer{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .feet{
+        width: 560px;
+        padding: 10px;
+        margin: 10px;
+    }
+    .end img{
+        width: 1.5%;
+        display: block;
+        margin: auto;
+    }
+
+    </style>
+
+    
+</head>
+<body>
+
+    <div class="head"> 
+    <div class="logo">
+        
+    </div>
+
+    <div>
+        <nav>
+            <a href="#"><img src="img/asset 0.webp" alt=""></a> 
+            <a href="#" style="line-height: 15px;">BUILD SCHOOL <br> career builder</a>
+            <a href="#">台北班簡介</a>
+            <a href="#">新竹班簡介</a>
+            <a href="#">Microsoft證照</a>
+            <a href="#">校友會-青築未來協會 Build the Future</a>
+            <a href="#">Blog</a>
+            <a href="#">歷屆老師</a>
+            <a href="#">問題洽詢</a>
+            
+        </nav>  
+
+
+        <div class="headword">
+            <div class="headword_s">
+                <h3 style="font-size: 50px;">BUILD SCHOOL</h3>
+                <p>Build School 是軟體開發教育的先鋒 為您打造更有競爭力的職涯</p>
+            </div>
+        </div>
+
+        <div class="intro">
+            <div class="intro_s">
+                <p>台北班簡介及報名(2022/4/29)</p>
+            </div>
+            <div class="intro_s">
+                <p>新竹班簡介及報名(2022/2/15)</p>
+            </div>
+            <div class="intro_s">
+                <p>招生說明會簡介說明</p>
+            </div>
+        </div>
+    </div>        
+    
+    </div>
+
+    <div style="height: 100px;"></div>
+
+
+    <div class="wrap">
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <img src="img/1.jpg" alt="">
+                    <h3>Build School <br> /*我們的理念*/</h3>
+                    <p>
+                        Build = 將程式碼編譯及建置成可執行的軟體<br>Build = 動手做<br>Build = 軟體開發職涯的打造者
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <h3>實作及就業導向的軟體開發學校</h3> 
+                    <p>
+                    因應數位新時代的來臨，軟體、App、IoT 、SaaS、雲端平台的應用需求大爆炸，軟體工程師的招募需求持續上升，以2016年5月求職平台的統計資料，從高科技、電商、金融、傳產、網路服務、軟體資訊、新創等各行業，台灣至少有 27,000 位軟體開發工程師的職缺，甚至日本、新加坡等軟體及App 外商也來台灣求才。<br> <br>為了彌補企業求才所需技能及實務教學上的落差，我們希望能幫助想搭上軟體開發及數位經濟這艘火箭的學員們，打造更有競爭力的職涯!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 100px;background-color: blue;"></div>
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <h3>打造專案作品的學習方式<br>(Project-based Learning)</h3>
+                    <p>
+                        透過身經百戰的實務講師、各大企業的資深軟體工程師或CTO，帶領學員實作一個真正能運作的產品開發，解決真實世界的問題，透過專題過程中的實作，培養解決問題的能力，這裏不只是程式教學或教育訓練，學的不只是技能，而是 Learn how to learn，以因應變化多端的軟體開發技能，及自主尋找解答的能力。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <img src="img/asset 2.webp" alt="">
+                    <h3>動手實作才是真學習</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <img src="img/asset 3.webp" alt="">
+                    <h3>就業銜接</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <h3>真正企業職場所需技能<br>(Career Readiness)</h3>
+                    <p>
+                        除了透過打造專題作品過程，學到了技術及硬技能外，不同於一般的軟體培訓，我們更加入了簡報技巧、履歷及面試準備、以及真正軟體開發的團隊溝通及運作，這些軟實力 (Soft-Skill) 的培養，讓學員能提早做
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <h3>企業導師的連結<br>(Mentor Network)</h3>
+                    <p>
+                        每一位在軟體開發上有實務經驗的企業導師，他們是各大企業的主管、資深軟體工程師或 CTO，其人際連結及資源將帶給同學更多更好的就業機會，你將比別人站得更高，看得更遠!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clu">
+            <div class="out">
+                <div class="in">
+                    <img src="img/asset 4.webp" alt="">
+                    <h3>連結及影響力</h3>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div style="height: 200px; " ></div>
+
+    <div class="blue">
+        <p>18 - 24週的實作及作品開發 - 從訓練、就業、到企業連結</p>
+    </div>
+    <div class="bluefoot"> </div>
+    
+    <div class="wrap2">
+        <div class="clu2">
+            <h3>第 1 - 4 個月</h3>
+            <img src="img/asset 29.svg" alt="">
+            <h4>程式基礎教學</h4>
+            <p>● 業界實戰講師<br>● 企業主管/創業家/CTO 演講</p>
+        </div>
+        <div class="clu2">
+            <h3>第 5 - 6 個月</h3>
+            <img src="/img/asset 31.svg" alt="">
+            <h4>專案及作品導向實作</h4>
+            <p>● Web / App 作品開發 - 企業導師指導<br>● 不只是 Demo - 真實可運作成果<br>● 團隊開發 - 真實軟體開發團隊的運作及分工 (Agile敏捷, kanban 看板, CI 自動化建置)
+            </p>
+        </div>
+        <div class="clu2">
+            <h3>第 6 - 7 個月</h3>
+            <img src="img/asset 32.svg" alt="">
+            <h4>作品發表</h4>
+            <p>● 簡報 Demo 及溝通技巧<br>● 作品及程式碼講解<br>● 個人履歷準備 - GitHub, CodePen …</p>
+        </div>
+        <div class="clu2">
+            <h3>未來及展望</h3>
+            <img src="img/asset 6.webp" alt="">
+            <h4>就業及企業導師諮詢</h4>
+            <p>● 就業媒合或未來職涯諮詢<br>● 企業導師 -人際連結及資源</p>
+        </div>
+    </div>
+
+    <div style="height: 120px;"></div>
+    <div class="blue2">
+        <p>在課程及作品實作中，將採用這些工具 - 熟悉實務上軟體開發團隊的運作、<br>分工及真實專案的流程</p>
+    </div>
+    <div class="bluefoot2"> </div>
+
+    <div class="wrap3">
+        <div class="clu3">
+            <img src="img/asset 8.webp" alt="">
+        </div>
+        <div class="clu3">
+            <img src="img/asset 10.webp" alt="">
+        </div>
+        <div class="clu3">
+            <img src="img/asset 12.webp" alt="">
+        </div>
+        <div class="clu3">
+            <img src="img/asset 14.webp" alt="">
+        </div>
+        <div class="clu3">
+        <img src="img/asset 9.webp" alt="">
+        </div>
+        <div class="clu3">
+        <img src="img/asset 11.webp" style="padding: 30px 0px;" alt="">
+        </div>
+        <div class="clu3">
+        <img src="img/asset 13.webp "  style="padding: 10px 0px;" alt="">
+        </div>
+        <div class="clu3">
+        <img src="img/asset 15.webp" style="padding: 10px 0px;" alt="">
+        </div>
+            <div class="clu3">
+            <h3>版本控管及程式碼管理</h3>
+            <p>● 學員之練習及作品之程式碼，皆採用主流的 Git 當版本控管，熟悉版控的各種操作及實務專案運用; 課程中公開之練習程式碼，提交至 GitHub 上，其它學員可參考或供講師 Code Review 檢閱，並熟悉 Open Source 生態及工具</p>
+        </div>
+        
+        <div class="clu3">
+            <h3>作品開發及團隊管理</h3>
+            <p>● 除了使用 GitHub 外，專題開發階段也將使用 Microsoft Azure DevOps Services 進行團隊開發、包括程式碼管理、工作項目追蹤、自動化建置等，熟悉一個軟體開發專案之流程、分工及日常工作。<br>● 也可透過目前許多開發團隊常用的專案管理及看板工具 - Trello 進行工作分派、追蹤、或整個班的工作事項管理</p>
+        </div>
+        <div class="clu3">
+            <h3>雲端平台及服務</h3>
+            <p>● 雲端平台的使用已逐漸成為一個成熟軟體開發團隊之基礎，並讓開發、測試、佈署工作更加的便利及自動化。因此學員將使用 Microsoft Azure 當成作品及專案應用系統執行的雲端平台，包括 Azure App Service 建立網站服務、Azure SQL Database 建立資料庫服務</p>
+        </div>
+        <div class="clu3">
+            <h3>團隊溝通協作及通知</h3>
+            <p>● 課程過程中的線上討論、遠端溝通、或技術分享，將可透過 Microsoft Teams 或Slack 工具。另外練習的程式碼提交至 GitHub、或是 Trello 上的工作狀態更新，或是 Azure DevOps 上自動化建置的狀態，皆可發通知至 Microsoft Teams 或 Slack，透過自動化提升工作效率，並熟悉一個軟體開發團隊的協同合作</p>
+        </div>
+    </div>
+
+    <div style="height: 160px;"></div>
+    <div class="blue3">
+        <p>我們的講師及企業導師擁有在這些公司的工作經歷、擔任主管或資深工程師</p>
+    </div>
+    
+    <div class="wrap4">
+        <div class="clu4">
+            <img src="img/asset 17.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 19.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 21.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 24.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 18.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 20.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 22.webp" alt="">
+        </div>
+        <div class="clu4">
+            <img src="img/asset 23.webp" alt="">
+        </div>
+    </div>
+
+    <div style="background-color: silver; height: 10px;"></div>
+
+    <div class="wrap4">
+        <div class="clu4">
+            <h3 >合作及接洽</h3>
+            <p>
+            若為企業欲徵才、或非營利組織或公益團體希望參加我們的培訓或公益合作、或成為我們的講師或擔任指導學生的企業導師 (Inspire Mentor)，請與我們連絡<br>
+            <div style="height: 50px;"></div>
+            Build School|青杉人才有限公司 | 青群科技有限公司<br>
+            社團法人台灣青築未來協會 Build the Future<br>
+            (內政部立案 : 台內團字第 1090033261 號)<br>
+            email: contact@build-school.com 電話: 02-66057606<br>
+            台北市忠孝東路三段96號11F-1 (台北科大對面/忠孝新生站3號出口)
+            </p>
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="feet">
+            <img src="img/asset 25.webp" alt="">
+            <img src="/img/asset 26.webp" alt="">
+            <a href="#">隱私權宣告</a>
+        </div>
+        <div class="feet" style="text-align: right;">
+            @copy;copyright 2021 Build School
+        </div>
+        </footer>
+    <div class="end" > <img src="img/222.png" alt=""></div>
+</body>
+</html>
