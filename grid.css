@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .col-1{width: 8.333333%;}
+        .col-2{width: 16.666666%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.333333%;}
+        .col-5{width: 41.666666%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.333333%;}
+        .col-8{width: 66.666666%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.333333%;}
+        .col-11{width: 91.666666%;}
+        .col-12{width: 100%;}
+        [class*='col-']{
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .container{
+            
+            margin: auto;
+            max-width: 1200px;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px ;
+        }
+        .item{
+            background-color: darkgoldenrod;
+            height: 100px;
+            margin: 10px 0;
+        }
+        @media screen and (min-width:768px) {
+            .col-md-1{width: 8.333333%;}
+            .col-md-2{width: 16.666666%;}
+            .col-md-3{width: 25%;}
+            .col-md-4{width: 33.333333%;}
+            .col-md-5{width: 41.666666%;}
+            .col-md-6{width: 50%;}
+            .col-md-7{width: 58.333333%;}
+            .col-md-8{width: 66.666666%;}
+            .col-md-9{width: 75%;}
+            .col-md-10{width: 83.333333%;}
+            .col-md-11{width: 91.666666%;}
+            .col-md-12{width: 100%;}
+        }
+
+        @media screen and (min-width:1024px) {
+            .col-lg-1{width: 8.333333%;}
+            .col-lg-2{width: 16.666666%;}
+            .col-lg-3{width: 25%;}
+            .col-lg-4{width: 33.333333%;}
+            .col-lg-5{width: 41.666666%;}
+            .col-lg-6{width: 50%;}
+            .col-lg-7{width: 58.333333%;}
+            .col-lg-8{width: 66.666666%;}
+            .col-lg-9{width: 75%;}
+            .col-lg-10{width: 83.333333%;}
+            .col-lg-11{width: 91.666666%;}
+            .col-lg-12{width: 100%;}
+        }
+
+        @media screen and (min-width:1200px) {
+            .col-xl-1{width: 8.333333%;}
+            .col-xl-2{width: 16.666666%;}
+            .col-xl-3{width: 25%;}
+            .col-xl-4{width: 33.333333%;}
+            .col-xl-5{width: 41.666666%;}
+            .col-xl-6{width: 50%;}
+            .col-xl-7{width: 58.333333%;}
+            .col-xl-8{width: 66.666666%;}
+            .col-xl-9{width: 75%;}
+            .col-xl-10{width: 83.333333%;}
+            .col-xl-11{width: 91.666666%;}
+            .col-xl-12{width: 100%;}
+        }
+        /* 
+            container固定寬的容器
+            row 放很多欄容器
+            col的容器
+            */
+        .pic>img{
+            width: 100%;
+            height: 100%;
+        }
+        .num{
+            background-color: darkgreen;
+            padding: 10px;
+            text-align: center;
+        }
+        .r1>.col-2{margin-left: 20%;}
+        .r3>.col-2{margin-left: 30%;}
+        .row>.r2{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .r2>.col-5{margin-left: 5%;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row r1">
+            <div class="col-2">
+                <div class="pic">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="num">1</div>
+            </div>
+            <div class="col-5">
+                <div class="txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ratione est ab, similique non quia et, quas nostrum natus deleniti eos facilis sit iusto nesciunt sunt adipisci modi accusamus. Error.
+                </div>
+            </div>
+        </div>
+
+        <div class="row r2">
+            <div class="col-2">
+                <div class="pic">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="num">1</div>
+            </div>
+            <div class="col-5">
+                <div class="txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ratione est ab, similique non quia et, quas nostrum natus deleniti eos facilis sit iusto nesciunt sunt adipisci modi accusamus. Error.
+                </div>
+            </div>
+        </div>
+
+        <div class="row r3">
+            <div class="col-2">
+                <div class="pic">
+                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="num">1</div>
+            </div>
+            <div class="col-5">
+                <div class="txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ratione est ab, similique non quia et, quas nostrum natus deleniti eos facilis sit iusto nesciunt sunt adipisci modi accusamus. Error.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
