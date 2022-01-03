@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100&family=Shizuru&display=swap" rel="stylesheet">
+</head>
+<style>
+    p,h2,h3,h4,a,li,span{
+        font-family: 'Roboto', sans-serif;
+    }
+    *{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+    .logo{
+        margin: 10px;
+    }
+    
+    .gbtn>a{
+        text-decoration: none;
+        color: white;
+        background-color: #1fde82;
+        font-weight: bolder;
+        padding: 15px 20px;
+        border-radius: 10px;
+        /* margin-left: 20px; */
+        font-size: 15px;
+        display: inline-block;
+        white-space:nowrap;
+    }
+    .gbtn>a:hover{
+        background-color: rgb(70, 70, 70);
+    }
+    .wbtn>a{
+        text-decoration: none;
+        color: black;
+        /* background-color: #eee; */
+        border: #eee solid 2px;
+        font-weight: bolder;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-left: 20px;
+        font-size: 15px;
+    }
+    .wbtn>a:hover{
+        background-color: #1fde82;
+        color: white;
+    }
+    nav>a{
+        margin: 10px;
+        color: black;
+        text-decoration: none;
+        
+    }
+    .container{
+        margin-top: 100px;
+    }
+
+    .theme1{
+            margin: 10px;
+    }
+    .StoryTopic{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .about{
+        /* background-color: aqua; */
+        display: flex;
+        margin :10% 0;
+        align-items: center;
+        
+    }
+
+    .about img{
+        width: 50%;
+        margin-left: 20px;
+    }
+
+    .theme>p{
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+    .theme>h2{
+        font-size: 50px;
+        margin-top: 100px;
+    }
+    /* .pic>img{
+        /* margin-top: 20px; */
+    
+    
+    .txtbox .pic>img{
+        width: 30%;
+    }
+    .txtbox .txt>h2{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .txtbox>span a{
+        text-decoration: none;
+        font-weight: bolder;
+        
+    }
+    
+    .txtbox .txt>p{
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .txtbox{
+        margin-top: 50px;
+        padding: 30px;
+        box-shadow: 0 0 44px #eee;
+        border-radius: 15px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .number>span{
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .number>p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .number{
+        background-color: #3F81FF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        border-radius: 15px;
+        padding: 30px 20px;
+        color: white;
+    }
+    .number_topic{
+        margin: 10px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 0px 100px;
+        color: white;
+        
+    }
+    .number_topic>h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .number_topic>p{
+        font-size: 15px;
+        margin-bottom: 50px;
+        line-height: 20px;
+    }
+
+    #watch>a{
+        margin-left: 0;
+        color: white;
+    }
+
+    .blue{
+        background-color: #2570ff;
+        padding: 50px 0px;
+        
+    }
+    [class*='icon']{
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    .icon1>.col-md-3{
+        margin-left: 10%;
+    }
+    .icon2>.col-md-1{
+        margin-left: 20%;
+    }
+    .icon4>.col-md-1{
+        margin-left: 20%;
+    }
+    .icon3>.col-md-3{
+        margin-left: 5%;
+    }
+    .icon5>.col-md-3{
+        margin-left: 5%;
+    }
+    .icon5>.col-md-1{
+        margin-left: 5%;
+    }
+    .undericon .theme{
+        margin-bottom: 100px;
+    }
+    .undericon .about{
+        margin-left: auto;
+        margin-top: 100px;
+    }
+
+    .index{
+        position: relative;
+    }
+    .index .arrow01{
+        position: absolute;
+        top: 100%;
+        left: -200%;
+        width: 250%;
+        height: 250%;
+    }
+    .index .arrow02{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 170%;
+        height: 170%;
+    }
+    .index .arrow03{
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        width: 150%;
+        height: 150%;
+    }
+    .index .arrow04{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 200%;
+        height: 200%;
+    }
+    .theme1,.step{
+            margin-bottom: 50px;
+        }
+    .undericon .theme>h2{
+        font-size: 50px;
+        }
+
+    .green_cover.pic{
+        width: 100%;
+        position: relative;
+    }
+    .green_cover>.txt{
+        background-color: #20b2aaa3;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        padding: 10px;
+        opacity: 0;
+    }
+    .green_cover.pic:hover.green_cover>.txt{
+        opacity: 1;
+    }
+    .green_cover>.txt h3{
+        font-size:40px;
+        color: white;
+    }
+    .green_cover>.txt a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    .quest{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        justify-content: flex-end;
+    }
+    .quest>h3{
+        font-size: 35px;
+    }
+    .quest>input{
+        margin: 10px;
+        line-height: 30px;
+        border-radius: 5px;
+        border: #eee 1px solid;
+    }
+    .quest>textarea{
+        margin: 10px;
+        border-radius: 5px;
+        border: #eee 1px solid;
+    }
+
+    .quest .SEND{
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .SingUp{
+        margin-top: 100px;
+        justify-content: space-evenly;
+    }
+    .learnmore{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 0px;
+        /* line-height: 50px; */
+    }
+    .learnmore_email{
+        display: flex;
+        margin: 50px;
+    }
+    
+    #email{
+        width: 500px;
+        border-radius: 10px;
+        
+    }
+    .learnmore>h3{
+        font-size: 60px;
+        line-height: 70px;
+        text-align: center;
+    }
+    .learnmore .SEND.gbtn>a{
+        margin-left: auto;
+    }
+    .link .pic>img{
+        width: 60%;
+        height: 50%;
+        
+    }
+    .link .pic{
+        border: solid black 1px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        margin-top: 20px;
+    }
+    .link .pic:hover{
+        background-color: rgba(31, 222, 130,);
+
+    }
+    .link{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .footinfo .pic.logo>img{
+        width: 50%;
+    }
+    .footinfo .txt.phone{
+        display: flex;
+        line-height: 25px;
+    }
+    .footinfo .txt.phone > h4{
+        color:#1fde82;
+    }
+    .footinfo .txt,.link,.pic .logo{
+        padding:  0 20px; 
+    }
+    .footinfo ul a{
+        line-height: 25px;
+        text-decoration: none;
+    }
+    .footinfo h3{
+        margin-bottom: 25px;
+    }
+    .footinfo ul{
+        margin-bottom: 20px;
+    }
+    .copyright,.privacy{
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .copyright a{
+        text-decoration: none;
+        color: #1fde82;
+    }
+    .privacy a{
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    
+    .topic{
+        /* background-color: palegoldenrod; */
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 6;
+    }
+        nav{
+        position: static;
+        height:auto;
+        /* background-color: lemonchiffon; */
+        margin-left: auto;
+    }
+        nav>a{
+        display: inline-block;
+        width:auto;
+    }
+        #menu_check{
+        position: fixed;
+        top: -20px;
+    }
+    @media screen and (max-width:767px) {
+        .pic{
+            width: 100%;
+        }
+        [class*='icon'] .man{
+            width: 90%;
+            order: 6;
+            margin: 20px 0;
+        }
+        [class*='icon'] .index{
+            width: 20%;
+            margin: 20px 0;
+        }
+
+        [class*='icon'] .col-md-1{
+            margin-left: auto;
+        }
+
+        [class*='icon'] .col-md-3{
+            order: 6;
+            margin-left: auto;
+        }
+
+        [class*='icon'] {
+            margin: 10px;
+        }
+
+        [class*='icon']>h2,p {
+            margin: 10px 0;
+        }
+
+        [class*='arrow']{
+            display: none;
+        }
+        .theme1,.step{
+            margin: 20px;
+        }
+        
+        .theme>h2{
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 30px;
+        /* margin-left: 10px */
+        }
+        .theme>p{
+            font-size: 16px;
+        }
+        .undericon .theme>h2{
+            font-size: 30px;
+        }
+        .about{
+            justify-content: space-between;
+        }
+        .about img{
+        width: 70%; 
+        margin-left:30%;
+        
+        }
+        #email{
+        width: 200px;
+        }
+
+        .container{
+            margin-top: 60px;
+        }
+s
+        .number_topic{
+            padding: 0 10px;
+        }
+        .number_topic>h2{
+            font-size: 25px;
+            line-height: 40px;
+        }
+        .topic{
+            /* background-color: palegoldenrod; */
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav{
+            position: fixed;
+            top:0;
+            right: -400px;
+            height: 900px;
+            background-color: white;
+            opacity: 1;
+            transition: 1s;
+        }
+        nav>a{
+            display: block;
+            width: 300px;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+        nav a:first-child{
+            margin-top: 50px;
+            
+            border-bottom: black solid 1px;
+        }
+        nav>a:hover{
+            border-bottom: black solid 1px;
+            
+        }
+        .topic .subscrib.wbtn{
+            display: none;
+        }
+        .hg{
+            width: 40px;
+            height: 40px;
+            background-color:#1fde82;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-around;
+        }
+        .hg>span{
+            height: 4px;
+            width: 80%;
+            background-color: lemonchiffon;
+        }
+
+        #menu_check:checked ~ .topic nav{
+            opacity: 1;
+            right: 0;
+        }
+        #menu_check:checked ~ .topic .hg{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        #menu_check:checked ~ .topic .hg>span{
+            display: none;
+        }
+        #menu_check:checked ~ .topic .hg>.x{
+            background-color: black;
+            height: 3px;
+            width: 15px;
+            transform: rotate(45deg);
+            position: relative;
+        }
+        #menu_check:checked ~ .topic .hg>.x::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: black;
+            height: 3px;
+            width: 15px;
+            transform: rotate(90deg);
+        }
+
+        .copyright,.privacy{
+            font-size: 8px;
+            margin: 10px;
+        
+    }
+    .learnmore>h3{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .learnmore{
+        margin: 40px 0;
+    }
+    .quest h3 {
+        font-size: 30px;
+        margin: 30px;
+    }
+    .quest> input{
+        margin: 5px 30px;
+    }
+    .quest>textarea{
+        margin-left: 0;
+        margin: 5px 30px;
+    
+    }
+    .quest>.SEND.gbtn{
+        margin: 20px 0 0 30px;
+    }
+    .txt.phone{
+        display: flex;
+        align-items: center;
+    }
+
+    }
+
+</style>
+<body>
+    <input type="checkbox" id="menu_check">
+    <section class="topic">
+        <div class="logo">
+            <a href="#">
+                <img src="/img2/logo.webp" alt="">
+            </a>
+            
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Teams</a>
+            <a href="#">Case studio</a>
+            <a href="#">Contacts</a>
+            
+        </nav>
+        <label for="menu_check" class="hg">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="x"></div>
+        </label>
+        
+
+        <div class="subscrib wbtn">
+            <a href="#">SUBSCRIBE</a>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <div class="row theme1">
+            <div class="col-12 col-md-6">
+                <div class="theme">
+                    <h2 class="StoryTopic">Our creativity is your success</h2>
+                    <p>We break all boundaries if they happen on our way of project's development!</p>
+                    <div class="about">
+                        <div class="learn gbtn">
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                        <div class="pic">
+                            <a href="">
+                                <img src="/img2/watch.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="pic">
+                    <img src="/img2/home-image-1.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row theme1">
+            <div class="col-12 col-md-6">
+                <div class="pic">
+                    <img src="/img2/home-image-2.webp" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-1"></div>
+            <div class="col-12 col-md-5">
+                <div class="theme">
+                    <h2 class="StoryTopic">Creative challenges are our passion</h2>
+                    <p>Our team of designers and developers work closely together to build a creative and positive working environment. Functionality is as important to us as aesthetics.</p>
+                    <div class="about">
+                        <div class="learn gbtn">
+                            <a href="#">ABOUT US</a>
+                        </div>
+                        <div class="watch wbtn">
+                            <a href="#">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row theme1">
+            <div class="col-12 col-md-6">
+                <div class="theme">
+                    <h2>
+                        We provide a wide range of creative services
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-6"></div>
+        </div>
+
+        <div class="row green_dot">
+            <div class="col-12 col-md-4">
+                <div class="txtbox">
+                    <div class="pic">
+                        <img src="/img2/icon-1.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Web Design & Brending</h2>
+                        <p>A great brand combines design and conveys company’s value messaging to evoke emotion and drive strategy.</p>
+                    </div>
+                    <span><a href="#">READ ME</a></span>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="txtbox">
+                    <div class="pic">
+                        <img src="/img2/icon-3.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Graphic Design</h2>
+                        <p>Rich experience plus unlimited imagination create our successful service discovered by clients.</p>
+                    </div>
+                    <span><a href="#">READ ME</a></span>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="txtbox">
+                    <div class="pic">
+                        <img src="/img2/icon-3.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Video Production</h2>
+                        <p>Creating and handling professional video is our strong point. It plays major role in your digital business strategy.</p>
+                    </div>
+                    <span><a href="#">READ ME</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row green_dot">
+            <div class="col-12 col-md-4">
+                <div class="txtbox">
+                    <div class="pic">
+                        <img src="/img2/icon-4.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>SEO</h2>
+                        <p>We provide everything your site needs to perform at it’s highest capabilities on the major search engines.</p>
+                    </div>
+                    <span><a href="#">READ ME</a></span>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="txtbox">
+                    <div class="pic">
+                        <img src="/img2/icon-3.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Digital Marketing</h2>
+                        <p>We do collateral design, interactive design, hoarding, signage, presentation centres, and more.</p>
+                    </div>
+                    <span><a href="#">READ ME</a></span>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="txtbox">
+                    <div class="pic">
+                        <img src="/img2/icon-6.svg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Infographics</h2>
+                        <p>Turn your data into captivating artwork that will keep your audience engaged. Our team can help you with it.</p>
+                    </div>
+                    <span><a href="#">READ ME</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row theme1">
+            <div class="col-12 col-md-6">
+                <div class="theme">
+                    <h2 class="StoryTopic">If you have any questions, please contact us</h2>
+                    <p>Our professional support team try to do their best to provide you with high-quality consultations concerning any question about our services.</p>
+                    <div class="about">
+                        <div class="learn gbtn">
+                            <a href="#">CONTACT US</a>
+                        </div>
+                        <div class="watch wbtn">
+                            <a href="#">SUBSCRIBE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="pic">
+                    <img src="/img2/home-image-3.svg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-1"></div>
+        </div>
+
+        <div class="row blue">
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="number">
+                            <span>1880+</span>
+                            <p>Completed projects to the end by our specialists.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="number">
+                            <span>56</span>
+                            <p>Completed projects to the end by our specialists.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="number">
+                            <span>2000+</span>
+                            <p>Completed projects to the end by our specialists.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="number">
+                            <span>100%</span>
+                            <p>Completed projects to the end by our specialists.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="number_topic">
+                    <h2>Why choose our studio for your projects?</h2>
+                    <p>We are a command of professional and enthusiastic people, who like what they do and are always in the process of growing and improving their skills.</p>
+
+                    <div class="watch wbtn" id="watch">
+                        <a href="#">ORDER SERVICE</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="theme step">
+                    <h2>
+                        Steps of our work
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-6"></div>
+        </div>
+
+        <div class="row icon1">
+            <div class="col-12 col-md-3">
+                <div class="pic man">
+                    <img src="/img2/home-image-4.svg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-1">
+                <div class="pic index">
+                    <img src="/img2/number-01.svg" alt="">
+                    <img src="/img2/arrow01.png" alt="" class="arrow01">
+                </div>
+            </div>
+            <div class="col-12  col-md-5">
+                <h2>Meeting With The Customer</h2>
+                <p>The first meeting is very import to form contact and discuss the main ideas of the project.</p>
+            </div>
+        </div>
+
+        <div class="row icon2">
+            <div class="col-12 col-md-1">
+                <div class="pic index">
+                    <img src="/img2/number-02.svg" alt="">
+                    <img src="/img2/arrow02.png" alt="" class="arrow02">
+                </div>
+            </div>
+            <div class="col-12  col-md-5">
+                <h2>We Consider And Analyze The Work Plan</h2>
+                <p>When we understand the main eideas, we proceed to discussing the work plan and analyzing it.</p>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="pic man">
+                    <img src="/img2/home-image-5.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row icon3">
+            <div class="col-12 col-md-3">
+                <div class="pic man">
+                    <img src="/img2/home-image-6.svg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-1">
+                <div class="pic index">
+                    <img src="/img2/number-03.svg" alt="">
+                    <img src="/img2/arrow03.png" alt="" class="arrow03">
+                </div>
+            </div>
+            <div class="col-12  col-md-5">
+                <h2>Work Hard On The Project</h2>
+                <p>Our professional team start to handle with your project and embody the conception of the project.</p>
+            </div>
+        </div>
+
+        <div class="row icon4">
+            <div class="col-12 col-md-1">
+                <div class="pic index">
+                    <img src="/img2/number-04.svg" alt="">
+                    <img src="/img2/arrow04.png" alt="" class="arrow04">
+                </div>
+            </div>
+            <div class="col-12  col-md-5">
+                <h2>
+                    Once Again We Analyze And Check Everything</h2>
+                <p>We meet, analyze and check the done work and make needed corrections.</p>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="pic man">
+                    <img src="/img2/home-image-7.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row icon5">
+            <div class="col-12 col-md-3">
+                <div class="pic man">
+                    <img src="/img2/home-image-8.svg" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-1">
+                <div class="pic index">
+                    <img src="/img2/number-05.svg" alt="">
+                </div>
+            </div>
+            <div class="col-12  col-md-5">
+                <h2>
+                    We Finish The Work And Give It To The Customer</h2>
+                <p>The project is ready and we give it to the customer. Also we ask for the feedback from the customer.</p>
+            </div>
+        </div>
+
+        <div class="row undericon">
+            <div class="col-12 col-md-6 undericon_theme">
+                <div class="theme">
+                    <h2>
+                        Our team's work with Projects
+                    </h2>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 undericon_about">
+                <div class="about">
+                    <div class="allproject gbtn">
+                        <a href="#">ALL PROJECTS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="green_cover pic ">
+                    <img src="/img2/1.png" alt="">
+
+                    <div class="green_cover txt">
+                        <h3>"Minimal Creative "Impuls"</h3>
+                        <a href="#">VIEW SITE</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="green_cover pic ">
+                    <img src="/img2/2.png" alt="">
+
+                    <div class="green_cover txt">
+                        <h3>"Travel Company "Tour Up"</h3>
+                        <a href="#">VIEW SITE</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="green_cover pic ">
+                    <img src="/img2/3.png" alt="">
+
+                    <div class="green_cover txt">
+                        <h3>"Restaurant Pizza "Little Italy"</h3>
+                        <a href="#">VIEW SITE</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- <input type="text" name="" id="" placeholder="請輸入文字"> -->
+        <div class="row SingUp">
+            <div class="col-12 col-md-6">
+                <div class="pic">
+                    <img src="/img2/home-image-9.svg" alt="">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="quest">
+                    <h3>Sign up for our consultation</h3>
+                    <input type="text" name="" id="" placeholder="Name">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <div class="SEND gbtn">
+                        <a href="#">SENT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row learnmore">
+            <div class="col-12  col-md-6 learnmore">
+                <h3>Subscribe to our news and learn more</h3>
+                <div class="learnmore_email">
+                    <input type="email" name="" id="email" placeholder="Your email">
+                    <div class="SEND gbtn">
+                        <a href="#">SUBSCRIBE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footinfo">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="pic logo">
+                    <img src="/img2/logo.webp" alt="">
+                </div>
+                <div class="txt phone">
+                    <h4>Phone:</h4>
+                    <p>+ 1(045) - 224 - 12 - 67</p>
+                </div>
+                <div class="txt phone">
+                    <h4>Mail:  </h4>
+                    <p>info@demolink.org</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="txt">
+                    <h3>SERVICES</h3>
+                    <ul>
+                        <li><a href="#">Web design & brending</a></li>
+                        <li><a href="#">Web development</a></li>
+                        <li><a href="#">Full Optimization</a></li>
+                        <li><a href="#">Research & Strategy</a></li>
+                        <li><a href="#">Management & Marketing</a></li>
+                        <li><a href="#">Free support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="txt">
+                    <h3>About Company</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Case studio</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="txt">
+                    <h3>Our Social Networks</h3>
+                    <p>Join us in the social networks and keep up on the latest news.</p>
+                </div>
+                <div class="link">
+                    <div class="pic">
+                        <img src="/img2/logo1.png" alt="1">
+                    </div>
+                    <div class="pic">
+                        <img src="/img2/logo2.png" alt="1">
+                    </div>
+                    <div class="pic">
+                        <img src="/img2/logo3.png" alt="1">
+                    </div>
+                    <div class="pic">
+                        <img src="/img2/logo4.png" alt="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="copyright">
+                            @copy;copyright 2018 Wordpress Maikon. All Rights Reserved. | Theme design by 
+                            <a href="#">Zemez</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="privacy">
+                            <a href="#">Privacy & Policy</a>
+                            <a href="#">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
