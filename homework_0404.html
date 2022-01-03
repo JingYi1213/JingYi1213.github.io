@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100&family=Shizuru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <style>
     p,h2,h3,h4,a,li,span{
@@ -29,10 +30,10 @@
         font-weight: bolder;
         padding: 15px 20px;
         border-radius: 10px;
-        /* margin-left: 20px; */
         font-size: 15px;
         display: inline-block;
         white-space:nowrap;
+        transition: 0.5s;
     }
     .gbtn>a:hover{
         background-color: rgb(70, 70, 70);
@@ -47,6 +48,7 @@
         border-radius: 10px;
         margin-left: 20px;
         font-size: 15px;
+        transition: 0.5s;
     }
     .wbtn>a:hover{
         background-color: #1fde82;
@@ -58,7 +60,7 @@
         text-decoration: none;
         
     }
-    .container{
+    .container:first-of-type{
         margin-top: 100px;
     }
 
@@ -91,8 +93,6 @@
         font-size: 50px;
         margin-top: 100px;
     }
-    /* .pic>img{
-        /* margin-top: 20px; */
     
     
     .txtbox .pic>img{
@@ -169,7 +169,12 @@
     .blue{
         background-color: #2570ff;
         padding: 50px 0px;
+        margin: auto;
         
+    }
+    .blue_inside{
+        width: 1200px;
+        margin: auto;
     }
     [class*='icon']{
         display: flex;
@@ -246,7 +251,7 @@
         position: relative;
     }
     .green_cover>.txt{
-        background-color: #20b2aaa3;
+        background-color: #20b2aa;
         position: absolute;
         top: 0;
         right: 0;
@@ -259,6 +264,7 @@
         border-radius: 10px;
         padding: 10px;
         opacity: 0;
+        transition: 0.5s;
     }
     .green_cover.pic:hover.green_cover>.txt{
         opacity: 1;
@@ -291,6 +297,7 @@
         margin: 10px;
         border-radius: 5px;
         border: #eee 1px solid;
+        resize: vertical;
     }
 
     .quest .SEND{
@@ -342,10 +349,15 @@
         align-items: center;
         margin: 0 5px;
         margin-top: 20px;
+        background-color: transparent;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+    .link .pic>i {
+        color: rgb(160, 158, 158);
     }
     .link .pic:hover{
-        background-color: rgba(31, 222, 130,);
-
+        background-color: rgba(31, 222, 130);
     }
     .link{
         display: flex;
@@ -354,11 +366,12 @@
     .footinfo .pic.logo>img{
         width: 50%;
     }
-    .footinfo .txt.phone{
+    .footinfo .txt.phone a{
         display: flex;
         line-height: 25px;
+        text-decoration: none;
     }
-    .footinfo .txt.phone > h4{
+    .footinfo .txt.phone a > h4{
         color:#1fde82;
     }
     .footinfo .txt,.link,.pic .logo{
@@ -483,7 +496,7 @@
         .container{
             margin-top: 60px;
         }
-s
+
         .number_topic{
             padding: 0 10px;
         }
@@ -533,6 +546,7 @@ s
             flex-wrap: wrap;
             justify-content: center;
             align-content: space-around;
+            margin-right: 10PX;
         }
         .hg>span{
             height: 4px;
@@ -595,7 +609,7 @@ s
     .quest>textarea{
         margin-left: 0;
         margin: 5px 30px;
-    
+        resize: vertical;
     }
     .quest>.SEND.gbtn{
         margin: 20px 0 0 30px;
@@ -613,7 +627,7 @@ s
     <section class="topic">
         <div class="logo">
             <a href="#">
-                <img src="/img2/logo.webp" alt="">
+                <img src="/img2/logo.webp" alt="MAIKON">
             </a>
             
         </div>
@@ -802,8 +816,10 @@ s
             </div>
             <div class="col-12 col-md-1"></div>
         </div>
+    </div>
 
-        <div class="row blue">
+    <div class="row blue">
+        <div class="row blue_inside">
             <div class="col-12 col-md-6">
                 <div class="row">
                     <div class="col-12 col-md-6">
@@ -838,7 +854,7 @@ s
                 <div class="number_topic">
                     <h2>Why choose our studio for your projects?</h2>
                     <p>We are a command of professional and enthusiastic people, who like what they do and are always in the process of growing and improving their skills.</p>
-
+    
                     <div class="watch wbtn" id="watch">
                         <a href="#">ORDER SERVICE</a>
                     </div>
@@ -846,7 +862,9 @@ s
                 
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="theme step">
@@ -1041,12 +1059,16 @@ s
                     <img src="/img2/logo.webp" alt="">
                 </div>
                 <div class="txt phone">
-                    <h4>Phone:</h4>
-                    <p>+ 1(045) - 224 - 12 - 67</p>
+                    <a href="tel:+ 1(045) - 224 - 12 - 67">
+                        <h4>Phone:</h4>
+                        <p>+ 1(045) - 224 - 12 - 67</p>
+                    </a>
                 </div>
                 <div class="txt phone">
-                    <h4>Mail:  </h4>
-                    <p>info@demolink.org</p>
+                    <a href="mailto:info@demolink.org">
+                        <h4>Mail:  </h4>
+                        <p>info@demolink.org</p>
+                    </a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
@@ -1079,18 +1101,18 @@ s
                     <p>Join us in the social networks and keep up on the latest news.</p>
                 </div>
                 <div class="link">
-                    <div class="pic">
-                        <img src="/img2/logo1.png" alt="1">
-                    </div>
-                    <div class="pic">
-                        <img src="/img2/logo2.png" alt="1">
-                    </div>
-                    <div class="pic">
-                        <img src="/img2/logo3.png" alt="1">
-                    </div>
-                    <div class="pic">
-                        <img src="/img2/logo4.png" alt="1">
-                    </div>
+                    <a href="#" class="pic">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="pic">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="pic">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="pic">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1114,5 +1136,9 @@ s
             </div>
         </footer>
     </div>
+
+
+    
+    
 </body>
 </html>
