@@ -23,8 +23,8 @@
                 order: 5;
             }
         }
-        body{
-            margin: 0 12px 12px 12px;
+        .row{
+            margin: 0;
         }
     </style>
     
@@ -36,10 +36,10 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper  justify-content-end d-none d-md-block d-xxl-block-->
     
-    <header class="sticky-top nav">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light flex-nowrap">
-                <div class="container-fluid flex-nowrap">
+    <header class="sticky-top nav bg-light">
+        
+            <nav class="container navbar navbar-expand-lg navbar-light  flex-nowrap">
+                <div class="container flex-nowrap">
                     <a class="navbar-brand text-success  d-md-block d-xxl-block" href="#">
                         <img src="/img2/logo.webp" alt="logo">
                         <h1 class="position-fixed d-none">MAIKON</h1>
@@ -74,7 +74,9 @@
             </div>
     
             <!-- <a class="navbar-brand text-success d-block d-sm-block d-md-none" href="#">MAIKON</a> -->
-            <button class="btn btn-primary 	d-block d-sm-block d-md-none bg-success " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">—</button>
+            <button class="btn btn-primary 	d-block d-sm-block d-md-none bg-success navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <span class="navbar-toggler-icon"></span>
+            </button>
     
             <div class="offcanvas offcanvas-end d-block d-sm-block d-md-none" tabindex="-1"   id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
@@ -107,7 +109,7 @@
             </div>
     
             </nav>
-        </div>
+        
         
     </header>
 

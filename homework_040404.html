@@ -170,9 +170,13 @@
     .blue{
         background-color: #2570ff;
         padding: 50px 0px;
-        margin: auto;
+        /* margin: auto; */
         
     }
+    .row{
+        margin: 0;
+    }
+    
     .blue_inside{
         width: 1200px;
         margin: auto;
@@ -405,6 +409,8 @@
     header{
         position: sticky;
         top: 0;
+        background-color: white;
+        z-index: 10;
     }
     .topic{
         height: 80px;
@@ -417,8 +423,9 @@
         /* top: 0;
         left: 0;
         right: 0; */
-        background-color: white;
+        /* background-color: white; */
         z-index: 6;
+        max-width: 1200px;
     }
     .topic .logo h1{
         color: transparent;
@@ -440,9 +447,9 @@
         position: fixed;
         top: -20px;
     }
-    body{
+    /* body{
         margin: 0 10px 10px 10px;
-    }
+    } */
     @media screen and (max-width:767px) {
         .pic{
             width: 100%;
