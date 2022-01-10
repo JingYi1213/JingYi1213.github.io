@@ -1,0 +1,2973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .topic h4,
+        h3,
+        h2,
+        a {
+            font-size: 10px;
+        }
+
+        .topic {
+            width: 100%;
+            background-color: #ee4d2d;
+        }
+
+        .top {
+            /* background-color: #ee4d2d; */
+            margin: auto;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .top a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .top a.box,
+        .help a.box {
+            margin-right: 1em;
+        }
+
+        .top a.box,
+        .help a.box::after {
+            content: '';
+            border-right: white 2px solid;
+            padding-right: 0.5em;
+        }
+
+        .follow img {
+            width: 30%;
+        }
+
+        .follow {
+            display: flex;
+            align-items: center;
+            /* justify-content: space-around; */
+        }
+
+        .help img {
+            width: 20%;
+        }
+
+        .top .col-6 {
+            display: flex;
+            align-items: center;
+        }
+
+        .top .col-6:nth-child(2) {
+            justify-content: end;
+        }
+
+        .top .follow {
+            display: flex;
+
+        }
+
+        .help a {
+            display: flex;
+            align-items: center;
+        }
+
+        .help a h4 {
+            line-height: 20px;
+        }
+
+        .help {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        /* .search .logo{
+            display: flex;
+            align-items: center;
+        } */
+        .logo a {
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 30px;
+        }
+
+        .buysea {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 0 3px;
+            border-radius: 3px;
+        }
+
+        .buysea input {
+            display: flex;
+            flex-grow: 1;
+            height: 40px;
+            border: transparent;
+        }
+
+        .buysea a {
+            display: flex;
+            justify-content: center;
+            margin: 1px 0;
+        }
+
+        .basket {
+            margin: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .recom li {
+            display: inline-block;
+            margin: 3px 5px;
+        }
+
+        .recom li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .yeargood a img {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .yeargood {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .carousel>.ca {
+            background-color: whitesmoke;
+            padding: 15px;
+        }
+
+        .navten h3 {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .navten {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0;
+
+        }
+
+        .ten a {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        .ten a img {
+            width: 50%;
+        }
+
+        .ten {
+            padding: 0 0;
+            margin: 0;
+        }
+
+        .dyson .pic {
+            padding: 0 0;
+        }
+
+        .dyson .pic img {
+            vertical-align: bottom;
+            margin: 0 0;
+        }
+
+        .moreitem {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .moreitem .more {
+            text-align: end;
+        }
+
+        .linkaa a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            position: relative;
+            height: 250px;
+            width: 215px;
+            padding: 0 20px;
+            color: red;
+            font-size: 16px;
+            border-right: red solid 2px;
+            justify-content: space-evenly;
+            background-color: white;
+        }
+
+        .discount {
+            background-color: orange;
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            color: red;
+            font-size: 16px;
+            text-align: center;
+            line-height: 32px;
+
+        }
+
+        .discount::after {
+            content: '';
+            display: block;
+            width: 50px;
+            border-top: transparent px solid;
+            border-right: orange 25px solid;
+            border-bottom: white 10px solid;
+            border-left: orange 25px solid;
+            position: absolute;
+            top: 100%;
+        }
+
+        .nike {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 60px;
+        }
+
+        .dyson_inside {
+            background-color: rgb(207, 2, 27);
+            padding: 50px;
+            margin-right: -14px;
+            border-end-end-radius: 15px;
+            border-end-start-radius: 15px;
+        }
+
+        .recent {
+            margin-top: 10px;
+        }
+
+        .recent .container {
+            padding: 0 0;
+        }
+
+        .clothbox {
+            margin-top: 10px;
+        }
+
+        .cloth_link a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-decoration: none;
+
+        }
+
+        .cloth {
+            padding: 0 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .cloth .col-1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cloth .x {
+            border: #eee solid 1.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+            text-decoration: none;
+            color: black;
+        }
+
+        .cloth_link h4,
+        img {
+            margin: 5px 0;
+        }
+
+        .clothbox h4 {
+            margin: 10px 0;
+        }
+
+        .cloth.down {
+            position: relative;
+        }
+
+        .cloth.down::after {
+            content: '>';
+            text-align: center;
+            display: block;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            border: brown 2px solid;
+            border-radius: 100%;
+        }
+
+        .sale {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .sale span {
+            color: white;
+            background-color: black;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .sale h4 {
+            color: orangered;
+            font-weight: bolder;
+        }
+
+        .checkall a {
+            line-height: 20px;
+            font-size: 20px;
+            text-decoration: none;
+
+
+        }
+
+        .check {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .sell {
+            position: relative;
+        }
+
+        .sold {
+            background-color: orangered;
+            display: block;
+            justify-content: center;
+            width: 80%;
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .sell a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            text-decoration: none;
+            color: red;
+            font-size: 16px;
+        }
+
+        .sell_sold .col-6 {
+            margin: 20px 0;
+        }
+
+        .sell_sold {
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        .twopic {
+            margin: 20px 0;
+        }
+
+        .shop_slogan {
+            display: flex;
+            font-size: 18px;
+        }
+
+        .shop_slogan:nth-child(2) {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .shop_slogan .slogan {
+            display: flex;
+            margin: 0 10px;
+        }
+
+        .shop a,
+        .slogan a {
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+        }
+
+        .shop a::after {
+            content: '';
+            border-right: red solid 2px;
+            padding-right: 10px;
+        }
+
+        .shop_row {
+            background-color: #eee;
+            padding: 40px 0;
+        }
+
+        .shop_item {
+            position: relative;
+
+        }
+
+        .shop_item h3 {
+            font-size: 18px;
+            display: inline-block;
+            color: red;
+            position: absolute;
+            bottom: 30px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .keyword_row {
+            display: flex;
+        }
+
+        .key_item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .hotitem_popu {
+            position: relative;
+        }
+
+        .hotitem_popu img:nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .hotitem h4 {
+            font-size: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hotitem span {
+            background-color: rgba(0, 0, 0, 30%);
+            font-size: 20px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+        }
+        .card_item_pic{
+            position: relative;
+        }
+        .card_item_pic img:nth-child(2){
+            position: absolute;
+            top: 0px;
+            left: 0;
+        }
+        .card_item{
+            position: relative;
+            margin-top: 10px;
+            border: transparent 1px solid;
+        }
+        .card_item span{
+            position: absolute;
+        }
+        .card_item span:first-of-type{
+            background-color: orange;
+            top: 10px;
+            left: -10px;
+        }
+        .card_item span:first-of-type::before{
+            content: '';
+            position: absolute;
+            border-bottom: transparent solid 5px;
+            border-top: orange solid 5px;
+            border-right: orange solid 5px;
+            border-left: transparent solid 5px;
+            top: 100%;
+            left: 0;
+        }
+        .card_item span:nth-of-type(2){
+            background-color: rgb(255, 69, 0);
+            top: 0;
+            right: 10px;
+            padding: 10px;
+            width: 60px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .card_item span:nth-of-type(2)::after{
+            content: '';
+            position: absolute;
+            border-bottom: transparent solid 20px;
+            border-right: orangered solid 30px;
+            border-left: orangered solid 30px;
+            width: 60px;
+            top: 100%;
+            left: 0;
+        }
+        .outline{
+            background-color: orangered;
+            padding: 8px;
+            text-align: center;
+            color: white;
+            margin-top: 3px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            z-index: 2;
+        }
+        .card_item:hover .outline{
+            opacity: 1;
+        }
+        .card_item:hover{
+            border: orangered 1px solid;
+        }
+        .tag_ul li{
+            display: inline-block;
+        }
+        .tag_ul  a{
+            text-decoration: none;
+            color: black;
+        }
+        .tag_ul li a p::after{
+            content: '';
+            border-right: black solid 2px;
+            padding-right: 5px;
+        }
+        .about a{
+            text-decoration: none;
+            color: black;
+        }
+        .country li{
+            display: inline-block;
+        }
+        .country ul a{
+            text-decoration: none;
+        }
+        .country ul a::after{
+            content: '';
+            border-right: black 2px solid;
+            padding: 0 3px;
+        }
+        .country span{
+            font-size: 12px;
+        }
+        .more>a{
+            padding: 10px  150px;
+        }
+    </style>
+</head>
+
+<!-- border-top:black solid 2px ; -->
+
+<body style="background-color: #eee;">
+    <!-- #ee4d2d  background-color: rgb(207, 2, 27)-->
+    <div class="section topic sticky-top">
+        <div class="container">
+            <div class="row top">
+                <div class="col-6">
+                    <div class="link">
+                        <a href="#" class="box">賣家中心</a>
+                    </div>
+                    <div>
+                        <a href="#" class="box">下載</a>
+                    </div>
+                    <div class="follow">
+                        <h4>追蹤我們</h4>
+                        <img src="/images/txt1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="help">
+                        <a href="#">
+                            <img src="/images/txt2.png" alt="">
+                            <h4>通知導覽</h4>
+                        </a>
+                        <a href="#">
+                            <img src="/images/txt3.png" alt="">
+                            <h4>幫助中心</h4>
+                        </a>
+                        <a href="#">
+                            <img src="/images/txt4.png" alt="">
+                            <h4>繁體中文</h4>
+                        </a>
+                        <a href="#" class="box">註冊</a>
+                        <a href="#">登入</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row search">
+                <div class="col-2 logo">
+                    <a href="#">
+                        <img src="/images/logo1.png" alt="">
+                        <h1>蝦皮購物</h1>
+                    </a>
+                </div>
+                <div class="col-9">
+                    <div class="buysea">
+                        <input type="text">
+                        <a href="#"><img src="/images/search1.png" alt=""></a>
+                    </div>
+                    <div class="recom">
+                        <ul>
+                            <li><a href="#">Nike</a></li>
+                            <li><a href="#">年菜</a></li>
+                            <li><a href="#">衣服</a></li>
+                            <li><a href="#">衣櫃</a></li>
+                            <li><a href="#">短靴</a></li>
+                            <li><a href="#">針織外套</a></li>
+                            <li><a href="#">樂高</a></li>
+                            <li><a href="#">烏魚子</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-1 basket">
+                    <a href=""><img src="/images/search2.png" alt=""></a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <section class="carousel">
+        <div class="container ca">
+            <div class="row">
+                <div class="col-8 car">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/images/banner.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/ad01.jpeg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/ad02.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4 yeargood">
+                    <a href="#"><img src="/images/yeargood1.png" alt=""></a>
+                    <a href="#"><img src="/images/yeargood2.png" alt=""></a>
+                </div>
+            </div>
+            <div class="row navten">
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav01.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav02.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav03.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav04.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav05.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav06.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav07.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav08.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav09.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+                <div class="col-1 ten">
+                    <a href="#"><img src="/images/nav10.png" alt="">
+                        <h3>免運!蝦皮直送</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="section recent">
+        <div class="container">
+            <div class="pic">
+                <img src="/images/recent-event.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container dyson">
+            <div class="row">
+                <div class="pic">
+                    <a href="#">
+                        <img src="/images/dyson-banner.jpeg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row dyson_inside">
+                <section class="moreitem">
+                    <div class="col-6">
+                        <div class="">
+                            <h4>正貨保證 天天最低價 再搶9折券</h4>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="more">
+                            <a href="#">
+                                <h4>查看更多></h4>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="nike">
+                    <div class="col-2">
+                        <div class="linkaa">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="/images/shoes1.png" alt="">
+                                </div>
+                                <span>$999</span>
+                                <div class="discount">
+                                    <p>5.3折</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="linkaa">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="/images/shoes2.png" alt="">
+                                </div>
+                                <span>$999</span>
+                                <div class="discount">
+                                    <p>5.3折</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="linkaa">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="/images/shoes1.png" alt="">
+                                </div>
+                                <span>$999</span>
+                                <div class="discount">
+                                    <p>5.3折</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="linkaa">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="/images/shoes3.png" alt="">
+                                </div>
+                                <span>$999</span>
+                                <div class="discount">
+                                    <p>5.3折</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <div class="linkaa">
+                            <a href="#">
+                                <div class="pic">
+                                    <img src="/images/shoes4.png" alt="">
+                                </div>
+                                <span>$999</span>
+                                <div class="discount">
+                                    <p>5.3折</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-4">
+        <div class="container clothbox bg-white">
+            <div class="row">
+                <div class="col-12">
+                    <h4>分類</h4>
+                </div>
+                <div class="cloth">
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cloth down">
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="x">
+                        <div class="col-1">
+                            <div class="cloth_link">
+                                <img src="/images/category01.png" alt="">
+                                <h4>女生衣著</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container sell_sold">
+            <div class="row">
+                <div class="col-6">
+                    <div class="sale">
+                        <h4>限時𓄿特賣</h4>
+                        <span>02</span>
+                        <span>52</span>
+                        <span>32</span>
+                    </div>
+                </div>
+                <div class="col-6 check">
+                    <div class="checkall">
+                        <a href="#">查看全部></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="sell">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="/images/hot-product02.jpg" alt="">
+                            </div>
+                            <div class="pic">
+                                <img src="/images/tag.png" alt="">
+                            </div>
+                            <span>$999</span>
+                            <span class="sold">已售出000</span>
+                            <div class="discount">
+                                <p>5.3折</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sell">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="/images/hot-product02.jpg" alt="">
+                            </div>
+                            <div class="pic">
+                                <img src="/images/tag.png" alt="">
+                            </div>
+                            <span>$999</span>
+                            <span class="sold">已售出000</span>
+                            <div class="discount">
+                                <p>5.3折</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sell">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="/images/hot-product03.jpg" alt="">
+                            </div>
+                            <div class="pic">
+                                <img src="/images/tag.png" alt="">
+                            </div>
+                            <span>$999</span>
+                            <span class="sold">已售出000</span>
+                            <div class="discount">
+                                <p>5.3折</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sell">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="/images/hot-product04.jpg" alt="">
+                            </div>
+                            <div class="pic">
+                                <img src="/images/tag.png" alt="">
+                            </div>
+                            <span>$999</span>
+                            <span class="sold">已售出000</span>
+                            <div class="discount">
+                                <p>5.3折</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sell">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="/images/hot-product05.jpg" alt="">
+                            </div>
+                            <div class="pic">
+                                <img src="/images/tag.png" alt="">
+                            </div>
+                            <span>$999</span>
+                            <span class="sold">已售出000</span>
+                            <div class="discount">
+                                <p>5.3折</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sell">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="/images/hot-product06.jpg" alt="">
+                            </div>
+                            <div class="pic">
+                                <img src="/images/tag.png" alt="">
+                            </div>
+                            <span>$999</span>
+                            <span class="sold">已售出000</span>
+                            <div class="discount">
+                                <p>5.3折</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="twopic">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="pic">
+                        <img src="/images/85_1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="pic">
+                        <img src="/images/85_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container shop_row bg-white">
+            <div class="row pb-4 border-bottom">
+                <div class="col-6 shop_slogan ps-3 ">
+                    <div class="shop">
+                        <a href="#">蝦皮商城</a>
+                    </div>
+                    <div class="slogan">
+                        <i class="fas fa-reply-all"></i>
+                        <p>15天鑑賞期</p>
+                    </div>
+                    <div class="slogan">
+                        <i class="fas fa-truck-moving"></i>
+                        <p>蝦皮安心退</p>
+                    </div>
+                    <div class="slogan">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>假一賠二</p>
+                    </div>
+                </div>
+                <div class="col-6 shop_slogan">
+                    <div class="slogan">
+                        <a href="#">
+                            <p>查看全部</p>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row shop_inrow">
+                <div class="col-4">
+                    <div class="shop_item pic">
+                        <a href="#">
+                            <img src="/images/shopee-mall-area-ad.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall01.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall02.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall03.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall04.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall05.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall06.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall07.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="shop_item">
+                                <a href="#">
+                                    <img src="/images/shopee-mall08.png" alt="">
+                                </a>
+                                <h3>免運$999打85折</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 mb-5 ">
+        <div class="container  bg-white">
+            <div class="row keyword_row border-bottom  pt-3 pb-3">
+                <div class="col-6">
+                    <div class="keyword ">
+                        <h3 class="fs-6">熱門關鍵字</h3>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="keyword d-flex flex-row-reverse">
+                        <i class="fas fa-sync"></i>
+                        <span>更改</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-2 d-flex flex-grow-1">
+                    <a href="#" class="d-flex flex-grow-1">
+                        <div class="key_item">
+                            <div class="key_item_topic">
+                                <h3>Nike</h3>
+                                <span>80萬+件商品</span>
+                            </div>
+                            <img src="/images/no-name1.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <a href="#" class="d-flex flex-grow-1">
+                        <div class="key_item">
+                            <div class="key_item_topic">
+                                <h3>Nike</h3>
+                                <span>80萬+件商品</span>
+                            </div>
+                            <img src="/images/no-name2.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <a href="#" class="d-flex flex-grow-1">
+                        <div class="key_item">
+                            <div class="key_item_topic">
+                                <h3>Nike</h3>
+                                <span>80萬+件商品</span>
+                            </div>
+                            <img src="/images/no-name3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <a href="#" class="d-flex flex-grow-1">
+                        <div class="key_item">
+                            <div class="key_item_topic">
+                                <h3>Nike</h3>
+                                <span>80萬+件商品</span>
+                            </div>
+                            <img src="/images/no-name4.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <a href="#" class="d-flex flex-grow-1">
+                        <div class="key_item">
+                            <div class="key_item_topic">
+                                <h3>Nike</h3>
+                                <span>80萬+件商品</span>
+                            </div>
+                            <img src="/images/no-name5.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 mb-5 ">
+        <div class="container  bg-white">
+            <div class="row keyword_row border-bottom  pt-3 pb-3">
+                <div class="col-6">
+                    <div class="keyword ">
+                        <h3 class="fs-6">熱門關鍵字</h3>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="keyword d-flex flex-row-reverse">
+                        <i class="fas fa-chevron-circle-right"></i>
+                        <span>查看全部</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-2 d-flex">
+                    <a href="#" class="text-decoration-none">
+                        <div class="hotitem ">
+                            <div class="hotitem_popu">
+                                <img src="/images/hot-product01.png" style="width: 100%;" alt="">
+                                <img src="/images/top.png" style="width: 30%;" alt="">
+                                <span>月銷售14萬+</span>
+                            </div>
+                            <h4>熱門滿額免運專區</h4>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex">
+                    <a href="#" class="text-decoration-none">
+                        <div class="hotitem ">
+                            <div class="hotitem_popu">
+                                <img src="/images/hot-product02.jpg" style="width: 100%;" alt="">
+                                <img src="/images/top.png" style="width: 30%;" alt="">
+                                <span>月銷售14萬+</span>
+                            </div>
+                            <h4>熱門滿額免運專區</h4>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex">
+                    <a href="#" class="text-decoration-none">
+                        <div class="hotitem ">
+                            <div class="hotitem_popu">
+                                <img src="/images/hot-product03.jpg" style="width: 100%;" alt="">
+                                <img src="/images/top.png" style="width: 30%;" alt="">
+                                <span>月銷售14萬+</span>
+                            </div>
+                            <h4>熱門滿額免運專區</h4>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex">
+                    <a href="#" class="text-decoration-none">
+                        <div class="hotitem ">
+                            <div class="hotitem_popu">
+                                <img src="/images/hot-product04.jpg" style="width: 100%;" alt="">
+                                <img src="/images/top.png" style="width: 30%;" alt="">
+                                <span>月銷售14萬+</span>
+                            </div>
+                            <h4>熱門滿額免運專區</h4>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex">
+                    <a href="#" class="text-decoration-none">
+                        <div class="hotitem ">
+                            <div class="hotitem_popu">
+                                <img src="/images/hot-product05.jpg" style="width: 100%;" alt="">
+                                <img src="/images/top.png" style="width: 30%;" alt="">
+                                <span>月銷售14萬+</span>
+                            </div>
+                            <h4>熱門滿額免運專區</h4>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex">
+                    <a href="#" class="text-decoration-none">
+                        <div class="hotitem ">
+                            <div class="hotitem_popu">
+                                <img src="/images/hot-product06.jpg" style="width: 100%;" alt="">
+                                <img src="/images/top.png" style="width: 30%;" alt="">
+                                <span>月銷售14萬+</span>
+                            </div>
+                            <h4>熱門滿額免運專區</h4>
+
+                        </div>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <div class="container  bg-white">
+            <div class="row keyword_row ">
+                <div class="col-6 ">
+                    <div class="keyword d-flex align-items-center">
+                        <a href="#" class="text-decoration-none ps-5 pe-5 border-bottom border-danger pt-3 pb-3">
+                            <h3 class="fs-6">熱門關鍵字</h3>
+                        </a>
+                        <a href="#" class="text-decoration-none ps-5 pe-5 pt-3 pb-3">
+                            <h3 class="fs-6">1.18年貨節</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                </div>
+            </div>
+
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="recommend d-flex">
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e5.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e6.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e7.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e8.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e9.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="col-2">
+                    <a href="#" class="card_item_a text-decoration-none">
+                        <div class="card_item pt-3 pb-3 ">
+                            <div class="card_item_pic">
+                                <img src="/images/1e10.jfif" alt="" class="w-100" >
+                                <img src="/images/99.png" alt="" style="width: 100%;">
+                            </div>
+                            <span>蝦皮精選</span>
+                            <span>8折</span>
+                            <div class="info">
+                                <h3>日本矮化微型櫻花 四季開花花卉盆栽 櫻花 種子</h3>
+                            </div>
+                            <div class="price d-flex justify-content-between mt-2">
+                                <p class="fw-bolder" style="color: orangered;">$8888</p>
+                                <p>已售出</p>
+                            </div>
+                            <div class="outline">
+                                <p>找相似</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="more">
+                        <a href="" class="text-decoration-none text-black bg-white" >
+                            查看更多
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white pb-5 border-top border-warning border-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 border-bottom border-dark mb-5">
+                    <div class="words pt-5 pb-5">
+                        <h3 class="fs-5 fw-bolder">蝦皮購物花得更少買得更好，買東西就是如此快速便利！</h3>
+                        <p class="fs-6">蝦皮購物是台灣首屈一指的電商平台，在東南亞六國皆有佈局（新加坡、馬來西亞、泰國、印尼、越南、菲律賓），簡易方便的操作介面讓你隨時隨地都能輕鬆購物！蝦皮購物擁有完整的金流、物流服務，提供多種安全可靠的付款方式，包含銀行轉帳、信用卡線上交易、貨到付款、蝦皮錢包，和街口支付等多元行動支付管道，更有蝦皮承諾保障你的交易安全，啟動第三方支付託管交易款項，無須擔心收不到訂購的商品、或是拿不到退還的金額。商品評價和評論透明呈現在你眼前，你可以快速挑選出商品受歡迎、並提供良好服務、得到買家一致推薦的賣家；還能夠透過購買清單中的訂單詳情獲得最即時的貨態追蹤，查詢訂單最新配送進度。現在就來加入蝦皮購物，享受最獨一無二的網路購物體驗！</p>
+                    </div>
+                    <div class="words pb-5">
+                        <h3 class="fs-5 fw-bolder">愛上蝦皮購物，強大的搜尋功幫助你找尋心中好物！</h3>
+                        <p class="fs-6">在蝦皮購物，你能夠用最划算的價格買到所有需要、想要的商品，從每日「限時特賣」專區，你可以找到各式好康下殺品；不知道要買什麼？快來「熱門搜尋」一覽時下最夯熱門話題商品，瞧瞧大家都在瘋什麼！「每日新發現」貼心的相關商品推薦為你整理出更多好選擇；「蝦皮團購」更是包辦食衣住行育樂，精選網路購物熱門團購商品讓你輕輕鬆鬆跟上流行腳步，從餐券、住宿券、電影票、遊樂園門票、SPA按摩券，到美食伴手禮、美妝保健用品、居家生活日用耗品、汽機車配件、手機3C用品通通買得到，快速出貨下單免運費，快來揪團享折扣！</p>
+                        <p class="fs-6">蝦皮商城網羅國內外各大知名品牌進駐，所有商品均享有100%正品的保證，種類繁多、品牌齊全，包括三星 SAMSUNG、華碩 ASUS、巴黎萊雅 L'OREAL PARIS、微星 msi、innisfree、紐巴倫 New Balance、LEVI’S、哈根達斯 Häagen-Dazs、戴森 dyson等，月月國際大牌超級品牌日更是讓你買得開心省得更開心，走在時尚最尖端不費力！別忘了還有蝦幣回饋，只要在優選賣家賣場和蝦皮商城消費即可獲得蝦幣累積和進行折抵，買越多賺越多，線上購物從未這麼簡單！</p>
+                    </div>
+                    <div class="words pb-5">
+                        <h3 class="fs-5 fw-bolder" >蝦皮購物台灣 11 大購物節，千萬不能錯過！</h3>
+                        <p class="fs-6">除了天天都有的購物金與限時特賣，蝦皮還有 11 大年度購物節你一定要知道！每年一、二月的農曆新年線上年貨大街年貨節，蝦皮發紅包讓你便宜買年貨，除舊佈新為你添好運；六月618蝦皮年中慶，用最划算折扣購入夏季服飾，換新衣就等這一檔；九月 9.9 超級購物節，是全台灣最大的網購盛典，眾多意想不到的優惠好禮全台瘋搶；十月的 10.10品牌加倍慶，不僅商品折扣加倍，更有買貴就退的商城最低價保證；十一月的 11.11 購物節，不論你是單身還死會，都該用蝦皮超優惠的折價券，入手高品質的商品犒賞自己；最後， 12.12 生日慶，蝦皮揪你一起狂歡慶祝，購入聖誕驚喜與新年好禮，就等這一波。台灣最狂的折扣優惠都在這裡，寵愛自己就從蝦皮購物開始！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 pt-3 pb-3">
+                    <span>分類</span>
+                </div>
+                <div class="bio d-flex ps-0 pe-0">
+                    <div class="col-2 d-flex flex-grow-1">
+                        <div class="tag">
+                            <ul class="tag_ul">
+                                <a href="#" class="text-decoration-none "><h2 >女生衣著</h2></a>
+                                <li><a href="#"><p>長褲</p></a></li>
+                                <li><a href="#"><p>T恤</p></a></li>
+                                <li><a href="#"><p>內睡衣</p></a></li>
+                                <li><a href="#"><p>外套</p></a></li>
+                                <li><a href="#"><p>其他</p></a></li>
+                                <li><a href="#"><p>針織/毛衣</p></a></li>
+                                <li><a href="#"><p>多件式外套</p></a></li>
+                                <li><a href="#"><p>大尺碼</p></a></li>
+                                <li><a href="#"><p>小可愛/背心</p></a></li>
+                                <li><a href="#"><p>帽T/大學T</p></a></li>
+                                <li><a href="#"><p>休閒運動服飾</p></a></li>
+                                <li><a href="#"><p>短褲</p></a></li>
+                                <li><a href="#"><p>佯裝</p></a></li>
+                                <li><a href="#"><p>裙子</p></a></li>
+                                <li><a href="#"><p>上衣類</p></a></li>
+                                <li><a href="#"><p>襯衫</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-2 d-flex flex-grow-1">
+                        <div class="tag">
+                            <ul class="tag_ul">
+                                <a href="#" class="text-decoration-none "><h2 >女生衣著</h2></a>
+                                <li><a href="#"><p>長褲</p></a></li>
+                                <li><a href="#"><p>T恤</p></a></li>
+                                <li><a href="#"><p>內睡衣</p></a></li>
+                                <li><a href="#"><p>外套</p></a></li>
+                                <li><a href="#"><p>其他</p></a></li>
+                                <li><a href="#"><p>針織/毛衣</p></a></li>
+                                <li><a href="#"><p>多件式外套</p></a></li>
+                                <li><a href="#"><p>大尺碼</p></a></li>
+                                <li><a href="#"><p>小可愛/背心</p></a></li>
+                                <li><a href="#"><p>帽T/大學T</p></a></li>
+                                <li><a href="#"><p>休閒運動服飾</p></a></li>
+                                <li><a href="#"><p>短褲</p></a></li>
+                                <li><a href="#"><p>佯裝</p></a></li>
+                                <li><a href="#"><p>裙子</p></a></li>
+                                <li><a href="#"><p>上衣類</p></a></li>
+                                <li><a href="#"><p>襯衫</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-2 d-flex flex-grow-1">
+                        <div class="tag">
+                            <ul class="tag_ul">
+                                <a href="#" class="text-decoration-none "><h2 >女生衣著</h2></a>
+                                <li><a href="#"><p>長褲</p></a></li>
+                                <li><a href="#"><p>T恤</p></a></li>
+                                <li><a href="#"><p>內睡衣</p></a></li>
+                                <li><a href="#"><p>外套</p></a></li>
+                                <li><a href="#"><p>其他</p></a></li>
+                                <li><a href="#"><p>針織/毛衣</p></a></li>
+                                <li><a href="#"><p>多件式外套</p></a></li>
+                                <li><a href="#"><p>大尺碼</p></a></li>
+                                <li><a href="#"><p>小可愛/背心</p></a></li>
+                                <li><a href="#"><p>帽T/大學T</p></a></li>
+                                <li><a href="#"><p>休閒運動服飾</p></a></li>
+                                <li><a href="#"><p>短褲</p></a></li>
+                                <li><a href="#"><p>佯裝</p></a></li>
+                                <li><a href="#"><p>裙子</p></a></li>
+                                <li><a href="#"><p>上衣類</p></a></li>
+                                <li><a href="#"><p>襯衫</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-2 d-flex flex-grow-1">
+                        <div class="tag">
+                            <ul class="tag_ul">
+                                <a href="#" class="text-decoration-none "><h2 >女生衣著</h2></a>
+                                <li><a href="#"><p>長褲</p></a></li>
+                                <li><a href="#"><p>T恤</p></a></li>
+                                <li><a href="#"><p>內睡衣</p></a></li>
+                                <li><a href="#"><p>外套</p></a></li>
+                                <li><a href="#"><p>其他</p></a></li>
+                                <li><a href="#"><p>針織/毛衣</p></a></li>
+                                <li><a href="#"><p>多件式外套</p></a></li>
+                                <li><a href="#"><p>大尺碼</p></a></li>
+                                <li><a href="#"><p>小可愛/背心</p></a></li>
+                                <li><a href="#"><p>帽T/大學T</p></a></li>
+                                <li><a href="#"><p>休閒運動服飾</p></a></li>
+                                <li><a href="#"><p>短褲</p></a></li>
+                                <li><a href="#"><p>佯裝</p></a></li>
+                                <li><a href="#"><p>裙子</p></a></li>
+                                <li><a href="#"><p>上衣類</p></a></li>
+                                <li><a href="#"><p>襯衫</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-2 d-flex flex-grow-1">
+                        <div class="tag">
+                            <ul class="tag_ul">
+                                <a href="#" class="text-decoration-none "><h2 >女生衣著</h2></a>
+                                <li><a href="#"><p>長褲</p></a></li>
+                                <li><a href="#"><p>T恤</p></a></li>
+                                <li><a href="#"><p>內睡衣</p></a></li>
+                                <li><a href="#"><p>外套</p></a></li>
+                                <li><a href="#"><p>其他</p></a></li>
+                                <li><a href="#"><p>針織/毛衣</p></a></li>
+                                <li><a href="#"><p>多件式外套</p></a></li>
+                                <li><a href="#"><p>大尺碼</p></a></li>
+                                <li><a href="#"><p>小可愛/背心</p></a></li>
+                                <li><a href="#"><p>帽T/大學T</p></a></li>
+                                <li><a href="#"><p>休閒運動服飾</p></a></li>
+                                <li><a href="#"><p>短褲</p></a></li>
+                                <li><a href="#"><p>佯裝</p></a></li>
+                                <li><a href="#"><p>裙子</p></a></li>
+                                <li><a href="#"><p>上衣類</p></a></li>
+                                <li><a href="#"><p>襯衫</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row pt-5 pb-5 about">
+                <div class="col-2 d-flex flex-grow-1">
+                    <div class="customer d-flex  flex-column">
+                        <h2 class="fs-5 pb-2">客服中心</h2>
+                        <ul>
+                            <li><a href="#">幫助中心</a></li>
+                            <li><a href="#">蝦皮商城</a></li>
+                            <li><a href="#">付款方式</a></li>
+                            <li><a href="#">蝦皮錢包</a></li>
+                            <li><a href="#">蝦幣</a></li>
+                            <li><a href="#">運費補助</a></li>
+                            <li><a href="#">延長訂單撥款</a></li>
+                            <li><a href="#">聯絡客服</a></li>
+                            <li><a href="#">防詐騙宣導</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <div class="customer d-flex flex-column">
+                        <h2 class="fs-5 pb-2">關於蝦皮</h2>
+                        <ul>
+                            <li><a href="#">關於蝦皮</a></li>
+                            <li><a href="#">加入我們</a></li>
+                            <li><a href="#">蝦皮條款</a></li>
+                            <li><a href="#">隱私權政策</a></li>
+                            <li><a href="#">蝦皮商城</a></li>
+                            <li><a href="#">賣家中心</a></li>
+                            <li><a href="#">限時特賣</a></li>
+                            <li><a href="#">聯絡媒體</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <div class="customer d-flex  flex-column">
+                        <div class="credit">
+                            <h2 class="fs-5 pb-2">付款</h2>
+                            <img src="/images/card1.png" alt="" >
+                        </div>
+                        <div class="credit">
+                            <h2 class="fs-5 pb-2">物流合作</h2>
+                            <img src="/images/card2.png" alt="" >
+                        </div>
+                        <div class="credit">
+                            <h2 class="fs-5 pb-2">蝦皮直送包裝減量標章</h2>
+                            <img src="/images/card3.png" alt="" >
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <div class="customer d-flex flex-column">
+                        <h2 class="fs-5 pb-2">關於蝦皮</h2>
+                        <ul>
+                            <li><a href="#">
+                                <i class="fab fa-facebook"></i>
+                                Facebook</a></li>
+                            <li><a href="#">
+                                <i class="fab fa-instagram-square"></i>
+                                Instagram</a></li>
+                            <li><a href="#">
+                                <i class="fab fa-line"></i>
+                                Line</a></li>
+                            <li><a href="#">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn</a></li>
+                            <li><a href="#">
+                                <i class="fas fa-lightbulb"></i>
+                                蝦品輯部落格</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="col-2 d-flex flex-grow-1">
+                    <div class="customer d-flex flex-column">
+                        <h2 class="fs-5 pb-2">下載蝦皮</h2>
+                        <div class="link_pic d-flex">
+                            <div class="qrcode">
+                                <img src="/images/qrcode.png" alt="" class="w-100">
+                            </div>
+                            <div class="onlineshop d-flex flex-column">
+                                <div class="shopname pt-2">
+                                    <a href="" class=" d-flex">
+                                        <i class="fab fa-apple d"></i>
+                                        <h3>App Store</h3>
+                                    </a>
+                                    
+                                </div>
+                                <div class="shopname d-flex pt-2">
+                                    <a href="" class=" d-flex">
+                                        <i class="fab fa-google-play"></i>
+                                        <h3>Google Play</h3>
+                                    </a>
+                                    
+                                </div>
+                                <div class="shopname d-flex pt-2">
+                                    <a href="" class=" d-flex">
+                                        <i class="fab fa-reddit-square"></i>
+                                        <h3>App Gallery</h3>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white ">
+        <div class="container border-top">
+            <div class="row pt-3 pb-3">
+                <div class="col-4">
+                    <div class="copyright">
+                        <h3>&copy; 2022 Shopee 版權所有</h3>
+                    </div>
+                </div>
+                <div class="col-8 ">
+                    <div class="country d-flex align-items-center justify-content-end" >
+                        <span>國家和地區</span>
+                        <ul class="fs-6">
+                            <li><a href="">新加坡</a></li>
+                            <li><a href="">印尼</a></li>
+                            <li><a href="">台灣</a></li>
+                            <li><a href="">泰國</a></li>
+                            <li><a href="">馬來西亞</a></li>
+                            <li><a href="">越南</a></li>
+                            <li><a href="">菲律賓</a></li>
+                            <li><a href="">巴西</a></li>
+                            <li><a href="">墨西哥</a></li>
+                            <li><a href="">哥倫比亞</a></li>
+                            <li><a href="">智利</a></li>
+                            <li><a href="">波瀾</a></li>
+                            <li><a href="">西班牙</a></li>
+                            <li><a href="">法國</a></li>
+                            <li><a href="">印度</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- <sectopn class="mb-5 ">
+        <div class="container ">
+            <div class="row pt-5 pb-5">
+                <div class="col-2">
+                    <div class="customer">
+                        <h2 class="fs-5 pb-2">客服中心</h2>
+                        <ul>
+                            <li><a href="#">幫助中心</a></li>
+                            <li><a href="#">蝦皮商城</a></li>
+                            <li><a href="#">付款方式</a></li>
+                            <li><a href="#">蝦皮錢包</a></li>
+                            <li><a href="#">蝦幣</a></li>
+                            <li><a href="#">運費補助</a></li>
+                            <li><a href="#">延長訂單撥款</a></li>
+                            <li><a href="#">聯絡客服</a></li>
+                            <li><a href="#">防詐騙宣導</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sectopn> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
