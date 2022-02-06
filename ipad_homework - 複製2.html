@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/homework/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        /* .container{
+            max-width: 1000px;
+        } */
+        @media screen and (max-width:767px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .container {
+                max-width: 1000px;
+            }
+        }
+
+        .more_section {
+            background-color: rgb(128, 128, 128, 30%);
+        }
+
+        .info{
+            background-color: rgb(128, 128, 128, 30%);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+    </style>
+    <title>Hello, world!</title>
+    <!-- <i class="fab fa-apple"></i> -->
+</head>
+
+<body>
+    <section class="d-md-flex justify-content-md-center bg-dark " style="width: 100%; ">
+        <nav class="navbar navbar-expand-lg navbar-light" >
+            <div class="container-fluid" style="width: 1000px;">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand text-white" href="#"><i class="fab fa-apple"></i></a>
+                <a class="navbar-brand order-lg-last text-white" href="#"><i class="fas fa-shopping-bag"></i></a>
+
+                <div class="collapse navbar-collapse w-100 ms-1" id="navbarTogglerDemo03">
+                    <div class="d-flex flex-column flex-md-row-reverse w-100 ">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-around w-100 align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="#">商店</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Mac</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">iPad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">iPhone</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Watch</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">AirPods</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">TV和家庭</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Apple 獨家</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">配件</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">支援服務</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex order-first">
+                            <input class="form-control me-2 d-sm-block d-md-none" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-dark" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="topic bg-light pt-3 pb-3 fs-4">
+        <div class="container topic_container container">
+            <div class="row topic_row">
+                <div class="col-6 col-md-6 topic_col-6">
+                    <div class="topic topic_item">
+                        <h1>iPad Air</h1>
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-6 topic_col-6">
+                    <div class="price topic_item text-end">
+                        <span id="price">NT$18,900 起</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="more_section pt-3 pb-3 " style="font-size: 12px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="more topic_item d-flex justify-content-center">
+                        <h2>可申請最長達 12 個月的零利率分期付款。</h2>
+                        <a href="#" class="text-decoration-none text-">進一步了解</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <div class="buy_item fs-1 mt-3 mb-3">
+                        <h2>購買 iPad Air</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <div class="pic">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-202009?wid=443&hei=535&fmt=jpeg&qlt=95&.v=1599066777000"
+                            alt="預覽圖" class="w-100" id="show">
+                    </div>
+                </div>
+                <div class="col-6 col-md-6">
+                    <!-- <div class="icon">
+                        <div class="row g-1" id="test"></div>
+                    </div> -->
+
+
+                    <!-- <div class="net">
+                        <div id="net"></div>
+                    </div> -->
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item border-0 border-top">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne" id="itemName">
+                                    外觀
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body" id="accordion">
+                                    <h2>外觀</h2>
+                                    <div class="row g-1" id="test"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 border-top">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo" id="ramName">
+                                    儲存裝置
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    <h2 class="pt-2">儲存裝置</h2>
+                                    <div class="info mt-3 mb-3">
+                                        <p>提前為日後預留空間。你的 iPad 儲存空間愈大，你就有愈多空間儲存數位內容，滿足現在和未來所需。</p>
+                                        
+                                    </div>
+                                    <div class="row g-1" id="ram"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 border-top border-bottom">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree" id="netName">
+                                    連線能力
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <div id="net">
+                                        <div class="col-12 d-flex flex-column">
+                                            <h2>連線能力</h2>
+                                            <div class="bbox d-flex">
+                                                <button id="btn1"
+                                                    class="w-50 pt-3 pb-3  bg-light rounded-3  border-secondary border-1 me-1"
+                                                    style="height: 100px;"></button>
+                                                <button id="btn2"
+                                                    class="w-50 pt-3 pb-3  bg-light rounded-3  border-secondary border-1 me-1"
+                                                    style="height: 100px;"></button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const phone = {
+            "outward": [
+
+                {
+                    "color": "gray",
+                    "title": "太空灰",
+                    "icon": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-spacegray-201903?wid=102&amp;hei=102&amp;fmt=png-alpha&amp;.v=1552422652805",
+                    "pic": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-spacegray-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650646000",
+                    "id": "0"
+                },
+
+                {
+                    "color": "silver",
+                    "title": "銀色",
+                    "icon": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201903?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1552422655664",
+                    "pic": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-silver-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650645000",
+                    "id": "1"
+                },
+
+                {
+                    "color": "green",
+                    "title": "綠色",
+                    "icon": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-green-202009?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=80&amp;.v=1599240136000",
+                    "pic": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-green-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000",
+                    "id": "2"
+                },
+                {
+                    "color": "rosegold",
+                    "title": "玫瑰金",
+                    "icon": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-gold-202009?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1599240136000",
+                    "pic": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-gold-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000",
+                    "id": "3"
+                },
+                {
+                    "color": "skyblue",
+                    "title": "天藍色",
+                    "icon": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-blue-202009?wid=102&amp;hei=102&amp;fmt=png-alpha&amp;.v=1599240136000",
+                    "pic": "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-blue-202009?wid=470&hei=556&fmt=png-alpha&.v=1598650644000",
+                    "id": "4"
+                }
+            ],
+
+
+            "Ram": [
+                { "64GB": "NT$18,900" },
+                { "256GB": "NT$23,200" }
+            ],
+
+            "network": [
+                { "Wi-Fi": "NT$18,900", "Wi-Fi+行動網路": "NT$23,200" },
+                { "Wi-Fi": "NT$23,900", "Wi-Fi+行動網路": "NT$28,200" }
+            ]
+
+        }
+
+        let a = document.getElementById("test")
+        let out = Object.keys(phone.outward);
+
+        phone.outward.forEach(item => {
+            let list = Object.values(item);
+            let t1 = list[1]
+            let t2 = list[2];
+            let t3 = list[4];
+            let icon = document.createElement("img");
+            icon.setAttribute("src", t2)
+            icon.classList.add("w-25", "mb-2")
+            let btn = document.createElement("button");
+            btn.append(icon, t1)
+            let b = document.createElement("div")
+            b.appendChild(btn)
+            b.classList.add("col-6");
+            btn.classList.add("w-100", "pt-3", "pb-3", "d-flex", "flex-column", "align-items-center", "bg-light", "rounded-3", "border-secondary", "border-1")
+            btn.setAttribute("id", t3)
+            btn.setAttribute("style", "Height:100px")
+            btn.setAttribute("data-bs-toggle", "collapse")
+            btn.setAttribute("data-bs-target", "#panelsStayOpen-collapseOne")
+
+            a.append(b)
+            btn.addEventListener("click", changeInfo);
+
+            function changeInfo() {
+                let index = btn.getAttribute("id")
+                let tem = phone.outward[index].pic;
+                let show = document.getElementById("show")
+                show.setAttribute("src", tem)
+                let itemName = document.getElementById("itemName");
+                itemName.innerText = t1;
+            }
+
+        })
+
+
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        btn1.innerHTML = `${Object.keys(phone.network[0])[0]}<br>${Object.values(phone.network[0])[0]}`
+        btn2.innerHTML = `${Object.keys(phone.network[1])[1]}<br>${Object.values(phone.network[1])[1]}`
+
+
+        let ram = document.getElementById("ram");
+        phone.Ram.forEach((item, index) => {
+            let gb = Object.keys(item);
+            let price = Object.values(item);
+            let btn = document.createElement("button");
+            // btn.append(gb, price);
+            btn.innerHTML = `${gb}<br>${price}`;
+            btn.classList.add("w-100", "pt-3", "pb-3", "d-flex", "flex-column", "align-items-center", "justify-content-center", "bg-light", "rounded-3", "border-secondary", "border-1")
+            btn.setAttribute("style", "Height:100px")
+            let b = document.createElement("div")
+            b.appendChild(btn)
+            b.classList.add("col-6");
+            ram.append(b)
+
+            btn.addEventListener("click", changeNetWork)
+            btn.setAttribute("data-bs-toggle", "collapse")
+            btn.setAttribute("data-bs-target", "#panelsStayOpen-collapseTwo")
+
+
+            function changeNetWork() {
+                let net = document.getElementById("net");
+                let tem = phone.network[index];
+
+                // btn1.innerText = Object.values(tem)[1];
+                btn1.innerHTML = `${Object.keys(tem)[0]}<br>${Object.values(tem)[0]}`;
+                btn2.innerHTML = `${Object.keys(tem)[1]}<br>${Object.values(tem)[1]}`;
+                let box = document.createElement("div");
+                box.append(btn1, btn2)
+                box.classList.add("d-flex", "col-12", "flex-row")
+                net.append(box)
+                btn1.classList.add("pt-3", "pb-3", "d-flex", "flex-column", "align-items-center", "justify-content-center", "bg-light", "rounded-3", "border-secondary", "border-1", "me-1")
+                btn2.classList.add("pt-3", "pb-3", "d-flex", "flex-column", "align-items-center", "justify-content-center", "bg-light", "rounded-3", "border-secondary", "border-1")
+                btn1.setAttribute("style", "Height:100px")
+                btn1.setAttribute("data-bs-toggle", "collapse")
+                btn2.setAttribute("data-bs-toggle", "collapse")
+                btn1.setAttribute("data-bs-target", "#panelsStayOpen-collapseThree")
+                btn2.setAttribute("data-bs-target", "#panelsStayOpen-collapseThree")
+
+
+
+                btn1.addEventListener("click", changePricem)
+                btn2.addEventListener("click", changePrice)
+                function changePricem() {
+                    let pri = document.getElementById("price");
+                    let price = `${Object.values(tem)[0]}`
+                    pri.innerHTML = `${clear(price)}`;
+                    let netName = document.getElementById("netName");
+                    netName.innerHTML = `${clear(price)}`;
+                }
+                function changePrice() {
+                    let pri = document.getElementById("price");
+                    let price = `${Object.values(tem)[1]}`
+                    pri.innerHTML = `${clear(price)}`;
+                    let netName = document.getElementById("netName");
+                    netName.innerHTML = `${clear(price)}`;
+                }
+
+
+                let pri = document.getElementById("price");
+                let price = `${Object.values(phone.Ram[index])}`
+                pri.innerHTML = `${clear(price)}`;
+
+                function clear(str) {
+                    str = str.replace(/,/g, "");//消除逗號
+                    return str;
+                }
+                let GB = `${Object.keys(phone.Ram[index])}`
+                let ramName = document.getElementById("ramName");
+                ramName.innerHTML = `${clear(GB)}`;
+            }
+
+
+        })
+
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

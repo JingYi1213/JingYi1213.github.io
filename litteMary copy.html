@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        i {
+            font-size: 48px;
+        }
+
+        [box-id] {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            transition: 0.3s;
+            border: rgb(128, 137, 122) 2px solid;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        [box-id].active {
+            border: solid 5px rgb(128, 137, 122);
+            box-shadow: 0 0 20px rgb(128, 137, 122);
+            transition: 0s;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-u8plEzZx41zaHGZ-ye7rsaL0DxjxyNudw&usqp=CAU);
+            background-size:400px 400px;
+        }
+
+        [box-id].activeRev {
+            border: solid 5px cornflowerblue;
+            box-shadow: 0 0 20px cornflowerblue;
+            transition: 0s;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-u8plEzZx41zaHGZ-ye7rsaL0DxjxyNudw&usqp=CAU);
+            background-size:400px 400px;
+        }
+
+        #msg {
+            font-size: 18px;
+            text-align: center;
+            
+        }
+        #msg2 {
+            font-size: 18px;
+            text-align: center;
+            
+        }
+        .other{
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            transition: 0.3s;
+            border: rgb(128, 137, 122) 2px solid;
+            border-radius: 10px;
+            margin: 10px;
+            /* background-color: rgb(128, 137, 122); */
+        }
+        button{
+            border: rgb(128, 137, 122) 2px solid;
+            border-radius: 10px;
+            background-image: url(https://img.tukuppt.com/bg_grid/01/16/41/YbNPxlSwGX.jpg!/fh/350);
+            
+        }
+        button:active{
+            background-color: cornflowerblue;
+            border: cornflowerblue 2px solid;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-u8plEzZx41zaHGZ-ye7rsaL0DxjxyNudw&usqp=CAU);
+            background-size:400px 400px;
+        }
+        .container{
+            background-image: url(https://i0.wp.com/img.zcool.cn/community/010ad55b101286a801212d578cb016.jpg@1280w_1l_2o_100sh.jpg);
+            background-size:1400px 1000px;
+        }
+    </style>
+</head>
+<!-- <div box-id="1" class="col-1"></div> -->
+<body>
+    <div class=" container mt-2 w-100">
+        <div class="row">
+            <div class="col-2">
+                <div box-id="1"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="2"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="3"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="4"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="5"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="6"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div box-id="18"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="19"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="20"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="21"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="22"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="7"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="other"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="32"></div>
+            </div>
+            <div class="col-2">
+            </div>
+            <div class="col-2">
+            </div>
+            <div class="col-2">
+                <div box-id="23"></div>
+            </div>
+            <div class="col-2">
+                <div class="other"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div box-id="17"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="31"></div>
+            </div>
+            <div class="col-2">
+                <p id="msg"></p>
+            </div>
+            <div class="col-2">
+                <p id="msg2"></p>
+            </div>
+            <div class="col-2">
+                <div box-id="24"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="8"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div box-id="16"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="30"></div>
+            </div>
+            <div class="col-4">
+                <button type="button" class=" w-100 h-100">今天午餐吃啥</button>
+            </div>
+            <div class="col-2">
+                <div box-id="25"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="9"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="other"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="29"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="28"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="27"></div>
+            </div>
+            <div class="col-2">
+                
+                <div box-id="26"></div>
+            </div>
+            <div class="col-2">
+                <div class="other"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div box-id="15"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="14"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="13"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="12"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="11"></div>
+            </div>
+            <div class="col-2">
+                <div box-id="10"></div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let brickData = [
+            {
+                id: "1",
+                color: "cornflowerblue",
+                icon: "fas fa-pizza-slice",
+                target: function () {
+                    return "披薩"
+                }
+            },
+            {
+                id: "2",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-hotdog",
+                target: function () {
+                    return "熱狗"
+                }
+            },
+            {
+                id: "3",
+                color: "cornflowerblue",
+                icon: "fas fa-egg",
+                target: function () {
+                    return "水煮蛋"
+                }
+            },
+            {
+                id: "4",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-drumstick-bite",
+                target: function () {
+                    return "雞腿"
+                }
+            },
+            {
+                id: "5",
+                color: "cornflowerblue",
+                icon: "fas fa-pepper-hot",
+                target: function () {
+                    return "麻辣鍋"
+                }
+            },
+            {
+                id: "6",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-ice-cream",
+                target: function () {
+                    return "冰淇淋"
+                }
+            },
+            {
+                id: "7",
+                color: "cornflowerblue",
+                icon: "fas fa-apple-alt",
+                target: function () {
+                    return "蘋果"
+                }
+            },
+            {
+                id: "8",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-piggy-bank",
+                target: function () {
+                    return "烤肉飯"
+                }
+            },
+            {
+                id: "9",
+                color: "cornflowerblue",
+                icon: "fab fa-gulp",
+                target: function () {
+                    return "飲料"
+                }
+            },
+            {
+                id: "10",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-seedling",
+                target: function () {
+                    return "素食便當"
+                }
+            },
+            {
+                id: "11",
+                color: "cornflowerblue",
+                icon: "fas fa-ice-cream",
+                target: function () {
+                    return "冰棒"
+                }
+            },
+            {
+                id: "12",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-fish",
+                target: function () {
+                    return "魚肉海鮮"
+                }
+            },
+            {
+                id: "13",
+                color: "cornflowerblue",
+                icon: "fas fa-glass-martini-alt",
+                target: function () {
+                    return "來杯調酒"
+                }
+            },
+            {
+                id: "14",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-hamburger",
+                target: function () {
+                    return "漢堡"
+                }
+            },
+            {
+                id: "15",
+                color: "cornflowerblue",
+                icon: "fas fa-mug-hot",
+                target: function () {
+                    return "來杯熱茶"
+                }
+            },
+            {
+                id: "16",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-cookie",
+                target: function () {
+                    return "來片餅乾"
+                }
+            },
+            {
+                id: "17",
+                color: "cornflowerblue",
+                icon: "fas fa-utensils",
+                target: function () {
+                    return "來去餐廳"
+                }
+            },
+            {
+                id: "18",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-bread-slice",
+                target: function () {
+                    return "吐司麵包"
+                }
+            },
+            {
+                id: "19",
+                color: "cornflowerblue",
+                icon: "fas fa-carrot",
+                target: function () {
+                    return "素食料理"
+                }
+            },
+            {
+                id: "20",
+                color: "rgb(128, 137, 122)",
+                icon: "far fa-lemon",
+                target: function () {
+                    return "泰式酸辣"
+                }
+            },
+            {
+                id: "21",
+                color: "cornflowerblue",
+                icon: "fas fa-candy-cane",
+                target: function () {
+                    return "甜點巧克力"
+                }
+            },
+            {
+                id: "22",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-store",
+                target: function () {
+                    return "便利商店"
+                }
+            },
+            {
+                id: "23",
+                color: "cornflowerblue",
+                icon: "fas fa-pastafarianism",
+                target: function () {
+                    return "海鮮料理"
+                }
+            },
+            {
+                id: "24",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-cheese",
+                target: function () {
+                    return "起司焗烤"
+                }
+            },
+            {
+                id: "25",
+                color: "cornflowerblue",
+                icon: "fas fa-stroopwafel",
+                target: function () {
+                    return "全麥大餅"
+                }
+            },
+            {
+                id: "26",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-hippo",
+                target: function () {
+                    return "特殊肉類"
+                }
+            },
+            {
+                id: "27",
+                color: "cornflowerblue",
+                icon: "fas fa-shopping-cart",
+                target: function () {
+                    return "大賣場美食街"
+                }
+            },
+            {
+                id: "28",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-kiwi-bird",
+                target: function () {
+                    return "肌肉全餐"
+                }
+            },
+            {
+                id: "29",
+                color: "cornflowerblue",
+                icon: "fas fa-walking",
+                target: function () {
+                    return "走路去買"
+                }
+            },
+            {
+                id: "30",
+                color: "rgb(128, 137, 122)",
+                icon: "fab fa-raspberry-pi",
+                target: function () {
+                    return "只吃水果"
+                }
+            },
+            {
+                id: "31",
+                color: "cornflowerblue",
+                icon: "fas fa-tint-slash",
+                target: function () {
+                    return "不喝飲料"
+                }
+            },
+            {
+                id: "32",
+                color: "rgb(128, 137, 122)",
+                icon: "fas fa-sad-cry",
+                target: function () {
+                    return "今天不吃"
+                }
+            }
+        ]
+
+        let step = 0;
+        let allStep = 0;
+        let currentIndex = 0;
+        let speed = 50;
+        let step2 = 0;
+        let allstep2 = 0;
+
+        let bricks = document.querySelectorAll("[box-id]")
+        const startBtn = document.querySelector("button")
+        const msg = document.querySelector("#msg")
+
+        window.onload = function () {
+            bricks = Array.from(bricks).sort((a, b) => {
+                return a.getAttributeNode("box-id").value - b.getAttributeNode("box-id").value
+            })
+            bricks.forEach(box => {
+                let id = box.getAttributeNode("box-id").value
+                let data = brickData.find(x => x.id == id)
+
+                let i = document.createElement("i")
+                i.setAttribute("class", data.icon)
+                i.style.color = data.color
+                box.append(i)
+            })
+            startBtn.onclick = function () {
+                speed = 50
+                let random = Math.floor(Math.random() * bricks.length) + 1
+                step = random + (3 * bricks.length)
+                allStep = step
+                turnAround()
+
+                step2 = random + (bricks.length * 4) /3
+                allstep2 = step2
+                revturnAround()
+                msg.innerText="";
+            }
+            function turnAround() {
+                bricks[currentIndex].classList.remove("active")
+                msg.innerText =""
+                currentIndex++
+
+                if (currentIndex >= bricks.length) {
+                    currentIndex = 0
+                }
+
+                bricks[currentIndex].classList.add("active")
+                let val = brickData[currentIndex].target()
+                msg.innerText = ` ${val}`
+                step--
+
+                if (step > 0) {
+                    setTimeout(turnAround, speed)
+                    if (step < Math.floor(allStep / 3)) speed += 7
+                }
+                // else {
+                //     let val = brickData[currentIndex].target()
+                //     msg.innerText += ` ${val}`
+                // }
+            }
+            let msg2 = document.querySelector("#msg2")
+            let revBricks = Array.from(bricks).sort((a, b) => {
+                return a.getAttributeNode("box-id").value - b.getAttributeNode("box-id").value
+            })
+            // console.log(revBricks[0])
+            let num = 31;
+            function revturnAround() {
+                revBricks[num].classList.remove("activeRev")
+                msg2.innerText =""
+                num--
+                if (num <= 0) {
+                    num = 31;
+                }
+                revBricks[num].classList.add("activeRev")
+                msg2.innerText = `${brickData[num].target()}`
+                step2--
+                let speed2 = 100
+                if (step2 > 0) {
+                    setTimeout(revturnAround, speed2)
+                    if (step2 < Math.floor(allstep2 / 3)) speed2 += 10
+                }
+                // else {
+                //     let val2 = brickData[num].target()
+                //     msg.innerText += `${val2} 配 `
+                // }
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
